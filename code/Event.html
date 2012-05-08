@@ -1,0 +1,324 @@
+<!DOCTYPE html />
+<html lang="en">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=1136px" />
+      <title>960 Grid System &mdash; Sandbox</title>
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/text.css" />
+      <link rel="stylesheet" href="css/960.css" />
+      <!--  <link rel="stylesheet" href="css/uncompressed/demo.css" />
+       -->   <link rel="stylesheet" href="css/uncompressed/sandbox.css" />
+      
+      <style>
+      	hr {
+         	border-top-width: 3px; 
+            border-top-color: #333;
+            margin-top: 0;
+         }
+         hr.mini {
+         	border-top-width: 2px;
+         }
+      	a {
+         	outline: none;
+         }
+      	a.inline {
+         	color: #333;
+         }
+         a.inline:hover {
+         	color: #333;
+         }
+         a.inline:active {
+            background-color: #333;
+            color: white;
+         }
+         body {
+            color: #333;
+            background-color: white;
+            font-size: 16px; /* WHY THE HELL IS THIS HERE, I DON'T EVEN KNOW */
+         }
+         a.button {
+         	text-decoration: none;
+            margin-bottom: 20px;
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px; /* with 1.5em line-height and the right border, this comes out to be the same height as the text in the 3x logo */
+            text-transform: uppercase; /* IT'S BETTER THIS WAY */
+            padding-left: 8px; /* to match the already-there padding-top */
+            background-color: white;
+            display: block;
+         }
+         a.button:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.button:active {
+         	border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.awesomebutton {
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px;
+            text-transform: uppercase;
+            padding-left: 8px;
+            margin-bottom: 9px;
+         }
+         a.awesomefacebookbutton {
+         	border-color: #3B5998;
+            background-color: #3B5998;
+            color: white;
+         }
+         a.awesomefacebookbutton:hover {
+         	border-color: #3B5998;
+            background-color: #3B5998;
+            color: white;
+         }
+         a.awesomefacebookbutton:active {
+            border-color: white;  
+            border-top-width: 2px;    /*  these are so that the rectangle */
+            border-bottom-width: 2px; /*  retains its aspect ratio when   */
+            padding-top: 1px;         /*  clicked 								  */
+            padding-bottom: 1px;
+         }
+         a.facebookbutton:hover {
+         	border-color: #3B5998;
+            color: #3B5998;
+         }
+         a.facebookbutton:active {
+         	background-color: #3B5998;
+            border-color: #3B5998;
+            color: white;
+			}
+         a.carouselbutton {
+         	text-align: center;
+            /*background-color: darkGrey;
+             color: white;*/
+            /*border-radius: 51px;*/
+            /*height: 51px;*/
+            text-transform: none;
+            padding-right: 8px;
+         }
+         a.selected {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:hover {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:active {
+            background-color: #333;
+            border-color: white;  
+            border-top-width: 2px;    /*  these are so that the rectangle */
+            border-bottom-width: 2px; /*  retains its aspect ratio when   */
+            padding-top: 1px;         /*  clicked 								  */
+            padding-bottom: 1px;
+         }
+         a.hugebutton {
+            border: solid 5px #333;
+            color: #333; /* overwrite link styling */
+            font-size: 52px; /* I forget why */
+            text-transform: uppercase;
+            padding-left: 14px;
+         }
+         a.hugebutton:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.hugebutton:active {
+            background-color: #333;
+            color: white;
+         }
+         a#loginbutton {
+            /*width: auto;
+            min-width: 118px;*/
+            width: 118px;
+            border-right-width: 3px;
+            height: 48px;
+            padding-right: 8px;
+            overflow: hidden;
+            float: left;
+            position: fixed;
+            top: 40px;
+         }
+         a#loginbutton:hover {
+            width: auto;
+            border-right-width: 3px;
+            min-width: 118px;
+         }
+         a#loginbutton:active {
+            overflow: visible;
+            width: auto;
+            min-width: 118px;
+         }
+         .gametitle {
+         	font-size: 75px;
+            margin-bottom: 3px; /*override text.css to make title closer to authors*/
+            line-height: 1em;
+            text-rendering: optimizeLegibility;
+            color: #333;
+            font-weight: bold;
+            /*float: left;
+             display: block;*/
+            /*text-transform: uppercase;*/
+            /*color: #D3A900;*/
+         }
+         .eventtitle {
+         	font-size: 60px;
+            line-height: 1em;
+            font-weight: bold;
+         }
+         .eventlabel {
+         	font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 0;
+            line-height: 1.1em; /* in case of really long locations */
+            display: normal;
+            float: none;
+            color: white;
+            padding-left: 11px; /* 8+3; 8 padding, 3 for absent 3px border */
+            text-align: left;
+         }
+         .eventdetail {
+            font-size: 20px;
+            font-style: normal;
+            color: white;
+            line-height: 1.1em; /* in case of really long locations */
+            display: block;
+            float: left;
+            margin-bottom: 20px;
+         }
+         .gameauthors {
+         	margin-bottom: 20px;
+            font-weight: bold;
+         }
+         p.credits {
+         	/*text-transform: uppercase;*/ /*see 5 lines below*/
+            font-weight: bold;
+         }
+         .credits:first-line {
+         	font-style: italic;
+            text-transform: none; /* due to a bug in WebKit, this line won't work in Safari or Chrome*/
+            font-weight: normal;
+         }
+         img.screenshot {
+         	max-width: 760px;
+            max-height: 400px;
+         }
+         div {
+            //background-color: rgba(0,0,0,.1);
+         }
+         </style>
+      
+      <!--this is so that the username stays in place-->
+      <!--modified from http://www.finefrog.com/2007/02/26/faking-css-position-fixed-in-internet-explorer-6/ -->
+      <script type="text/javascript">  
+         window.onscroll = ( 
+            function() {
+               var offset = 40; // set offset (likely equal to your css top)  
+               var element = document.getElementById('loginbutton');  
+               element.style.top = (offset - ((window.pageYOffset>=0) ? window.pageYOffset : 0)) + 'px';
+            }
+         )
+      </script>  
+      
+   </head>
+   <body>
+      
+      <div class="container-12">     
+         <!--header-->
+         <header class="grid-12" style="margin-top: 20px; margin-bottom: 12px; padding-top: 20px;">
+            <div class="grid-4 alpha">
+               <style>
+                  .smalllogo a{
+                     background: url('img/logotype 3x short.png'); /* scale factor */
+                     background-position: left top;
+                     background-repeat: no-repeat;
+                     display:block;
+                     margin-left: -93px; /* -31 times the scale factor */
+                     margin-top: -15px; /* -5 times the scale factor */
+                     margin-bottom: -15px;
+                     outline: none;
+                     width: 553px; /* 460{grid-6} + 93{31SF} */
+                     height: 81px; /* 27 times the scale factor */
+                  }
+                  .smalllogo a:hover {
+                     background-position: left center;
+                  }
+                  .smalllogo a:active {
+                     background-position: left bottom;
+                  }
+                  </style>
+               <div class="smalllogo" style=""><a class="smalllogo" style="text-indent: -9999px;" href="homepage.html">Game Development Club at San José State University</a></div>
+               
+            </div>
+            <div class="grid-8 omega">
+               <div class="grid-2 alpha">
+                  <a href="Info.html" class="button">Info</a>
+                  
+               </div>
+               <div class="grid-2">
+                  <a href="Challenge List.html" class="button" style="">
+                     Games
+                  </a>
+               </div>
+               <div class="grid-2">
+                  <a href="Event List.html" class="button selected">
+                     Events
+                  </a>
+               </div>
+               <div class="grid-2 omega" id="fixed-div">
+                  <a href="" class="button" id="loginbutton" style="">
+                     KelseyHigham
+                  </a>
+               </div>
+            </div>
+         </header>
+         <!--title-->
+         <div class="grid-12">
+            <h2 class="eventtitle">Meeting: Cryptic Studios's Brian Urbanek on Design</h2>
+         </div>
+         
+         <!--event info-->
+         <!--
+         <div class="grid-12">
+         	<div class="eventinfo" style="background-color: #333; float: left; /*necessary to have the background color show up?!*/ padding-top: 20px; margin-bottom: 20px;">
+               <div class="grid-2 alpha"><p class="eventlabel">Time:</p></div>
+               <p class="eventdetail grid-10 omega">January 15, 2010 7:30 pm — 9:00 pm<br /></p>
+               <div class="grid-2 alpha"><p class="eventlabel">Location:</p></div>
+               <p class="eventdetail grid-10 omega">Ohlone Room in the Student Union
+            </div>
+         </div>
+         -->
+         
+         <!--text-->
+         <div class="grid-8 push-2" style="font-size: 16px;">
+            <h3>Time</h3>
+            <p>January 15, 2010 7:30 pm — 9:00 pm</p>
+            <h3>Location</h3>
+            <p>Ohlone Room in the Student Union</p>
+            <h3>The Plan</h3>
+            <p>We will meet up, talk about our feelings, introduce each other to each other, act out an imitation of a videogame character, and get drunk.</p>
+            <h3>What Actually Happened</h3>
+            <p>Oh man, that one guy got drunk and started talking about all his past girlfriends, it was SO GREAT you should have been there</p>
+         </div>
+         <!--RSVP on FB-->
+         <div class="grid-2 pull-8">
+         	
+            <a href="" class="button awesomefacebookbutton">RSVP</a>
+            
+         </div>
+         
+         
+         
+      </div>
+      
+      
+      
+      
+   </body>
+</html>

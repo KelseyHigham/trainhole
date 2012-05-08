@@ -1,0 +1,205 @@
+<!DOCTYPE html />
+<html lang="en">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=1136px" />
+      <title>960 Grid System &mdash; Sandbox</title>
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/text.css" />
+      <link rel="stylesheet" href="css/videotext.css" />
+      <link rel="stylesheet" href="css/960.css" />
+      <!--  <link rel="stylesheet" href="css/uncompressed/demo.css" />
+       -->   <link rel="stylesheet" href="css/uncompressed/sandbox.css" />
+      
+      <style>
+      	a {
+         	outline: none;
+         	color: #333;
+            padding-left: 1px;
+            padding-right: 1px;
+         }
+         a:hover {
+         	color: #333;
+         }
+         a:active {
+            background-color: #333;
+            color: white;
+         }
+         body {
+            color: #333;
+            background-color: light;
+            font-size: 16px; /* WHY IS THIS HERE, I DON'T EVEN KNOW */
+         }
+         hr {
+            border-top: 2px solid #333
+         }
+         a.button {
+         	text-decoration: none;
+            margin-bottom: 20px;
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px; /* with 1.5em line-height and 3px border, this comes out to be the same height as the text in the 3x logo */
+            text-transform: uppercase; /* IT'S BETTER THIS WAY */
+            padding-left: 8px; /* to match the already-there padding-top */
+            background-color: white;
+            display: block;
+         }
+         a.button:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.button:active {
+         	border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.awesomebutton {
+         	border: solid 3px #333;
+            background-color: #333;
+            color: white;
+            font-size: 32px;
+            text-transform: uppercase;
+            padding-left: 8px;
+         }
+         a.awesomebutton:hover {
+            color: white;
+         }
+         a.awesomebutton:active {
+            border-top-width: 1px;    /*  these are so that the rectangle */
+            border-bottom-width: 1px; /*  retains its aspect ratio when   */
+            padding-top: 2px;         /*  clicked 								  */
+            padding-bottom: 2px;
+            border-color: white;
+         }
+         a.carouselbutton {
+         	text-align: center;
+            /*background-color: darkGrey;
+             color: white;*/
+            /*border-radius: 51px;*/
+            /*height: 51px;*/
+            text-transform: none;
+            padding-right: 8px;
+         }
+         a.selected {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:hover {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:active {
+            background-color: #333;
+            border-color: white;  
+            border-top-width: 2px;    /*  these are so that the rectangle */
+            border-bottom-width: 2px; /*  retains its aspect ratio when   */
+            padding-top: 1px;         /*  clicked 								  */
+         }
+         a.hugebutton {
+            border: solid 5px #333;
+            color: #333; /* overwrite link styling */
+            font-size: 52px; /* I forget why */
+            text-transform: uppercase;
+            padding-left: 14px;
+         }
+         a.hugebutton:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.hugebutton:active {
+            background-color: #333;
+            color: white;
+         }
+         .gametitle {
+         	font-size: 64px;
+            /*margin-bottom: 3px; /*override text.css to make title closer to authors*/
+            margin-bottom: 12px; /*make the baseline 20px from the screenshots*/
+            line-height: 1em;
+            text-rendering: optimizeLegibility;
+            color: #333;
+            /*float: left;
+             display: block;*/
+            /*text-transform: uppercase;*/
+            /*color: #D3A900;*/
+         }
+         .gameauthors {
+         }
+         div.credits {
+            padding-bottom: 20px;
+         }
+         .credits h3 {
+            text-transform: none; /* due to a bug in WebKit, this line won't work in Safari or Chrome*/
+            font-weight: normal;
+            font-size: 16px;
+            margin-bottom: 0px;
+         }
+         .credits li {
+            font-weight: bold;
+            text-transform: uppercase;
+            list-style: none;
+            margin-left: 0px;
+            line-height: 1em;
+         }
+         img.screenshot {
+         	max-width: 100%;
+            max-height: 75%;
+         }
+         /*div {
+          background-color: rgba(0,0,0,.1);
+          }
+          span {
+          background-color: rgba(0,0,0,.1);
+          }
+          a {
+          background-color: rgba(0,0,0,.1);
+          }*/
+         </style>
+      
+   </head>
+   <body>
+      
+      
+      <div class="container-12">     
+         
+         <div id="spacing" class="grid-12">Game Dev Club at SJSU</div>
+         
+         
+         <div id="sidebar" class="grid-3">
+         <img src="http://placekitten.com/220/220" style="margin-bottom: 20px;" />
+                  <a href="Info.html" class="button selected" style="">Info</a>
+                  
+              
+               
+                  <a href="Challenge List.html" class="button" style="">
+                     Games
+                  </a>
+               
+               
+                  <a href="Event List.html" class="button" style="">
+                     Events
+                  </a>
+
+                  <a href="" class="button" style="border-style: dotted;">
+                     Log In
+                  </a>
+         
+         
+      </div>
+      
+      <div class="grid-9">
+            <div id="tabs">
+               <a href="" class="button selected" style="display: inline">Article</a>
+               <a href="" class="button" style="display:inline; margin-left: 20px;">Edit</a>
+            </div>
+            <h2>CS Club</h2>
+            <p>The CS Club is both a room and a group of computer science majors and associates contained therein. Back in the days of yore, most members of the Game Dev Club were CS majors, because games necessarily involve programming, so there was a lot of overlap.</p>
+            <p>In honor of this tradition, and because it's convenient, we still use the Computer Science Clubroom for certain events.</p>
+            <p>The CS Club is in <strong>MacQuarrie Hall, room 227</strong>, on the second floor. It's open whenever there's an officer present; usually this is from about 9am to 11pm. MacQuarrie Hall, on the other hand, closes at 10pm, so if you want to get in past then, you'll have to get someone in the Club to let you into the building.</p>
+            <p>There's no good way to do this. Most of us resort to throwing rocks at the window.</p>
+         </div>
+      
+   </body>
+   <!--also, .push-4 and .pull-1-->
+</html>

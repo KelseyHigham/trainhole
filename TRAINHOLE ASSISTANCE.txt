@@ -1,0 +1,15 @@
+TRAINHOLE SPECIAL OPS FORCE README DELTA
+
+Works:
+node.tpl.php
+node--article.tpl.php
+
+node--article.tpl.php seems to override node.tpl.php. page.tpl.php seems to provide a bunch of stuff, and node.tpl.php seems to check for page.tpl.php's existence before providing said stuff in page.tpl.php's stead.
+
+page--node--1.tpl.php
+
+It'll take completely over just fine, apparently ditching everything and inheriting nothing? I'm not sure if I was using it for the right content type.
+
+Oh! Because it's a "page", it overrides "page". And "node"s override "node".
+
+I wonder how I override a page, for a given node type? I guess that is a stupid thing to do, and I should only specify stuff in "page" that should go in every page, and maybe use <?php if?>s.

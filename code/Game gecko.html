@@ -1,0 +1,431 @@
+<!DOCTYPE html />
+<html lang="en">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=1136px" />
+      <title>960 Grid System &mdash; Sandbox</title>
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/text.css" />
+      <link rel="stylesheet" href="css/960.css" />
+      <!--  <link rel="stylesheet" href="css/uncompressed/demo.css" />
+       -->   <link rel="stylesheet" href="css/uncompressed/sandbox.css" />
+      
+      <style>
+      	a {
+         	outline: none;
+         }
+      	a.inline {
+         	color: darkGray;
+         }
+         a.inline:hover {
+         	color: red;
+         }
+         a.inline:active {
+            background-color: red;
+            color: white;
+         }
+         body {
+            color: darkGray;
+            background-color: white;
+            font-size: 16px; /* WHY THE HELL IS THIS HERE, I DON'T EVEN KNOW */
+         }
+         a.button {
+         	text-decoration: none;
+            margin-bottom: 20px;
+         	border: solid 3px darkGray;
+            color: darkGray;
+            font-size: 32px; /* with 1.5em line-height and the right border, this comes out to be the same height as the text in the 3x logo */
+            text-transform: uppercase; /* it's BETTER THIS WAY */
+            padding-left: 8px; /* to match the already-there padding-top */
+            background-color: white;
+         }
+         a.button:hover {
+            border-color: red;
+            color: red;
+         }
+         a.button:active {
+            background-color: red;
+            color: white;
+         }
+         a.awesomebutton {
+         	border: solid 3px red;
+            color: red;
+            font-size: 32px;
+            text-transform: uppercase;
+            padding-left: 8px;
+            margin-bottom: 9px;
+         }
+         a.carouselbutton {
+         	text-align: center;
+            /*background-color: darkGrey;
+             color: white;*/
+            /*border-radius: 51px;*/
+            /*height: 51px;*/
+            text-transform: none;
+            padding-right: 8px;
+         }
+         a.selected {
+            border-color: darkGray;
+            background-color: darkGray;
+            color: white;
+         }
+         a.selected:hover {
+            border-color: red;
+            background-color: red;
+            color: white;
+         }
+         a.selected:active {
+            background-color: red;
+            border-color: white;  
+            border-top-width: 2px;    /*  these are so that the rectangle */
+            border-bottom-width: 2px; /*  retains its aspect ratio when   */
+            padding-top: 1px;         /*  clicked 								  */
+         }
+         a.hugebutton {
+            border: solid 5px darkGray;
+            color: darkGray; /* overwrite link styling */
+            font-size: 52px; /* I forget why */
+            text-transform: uppercase;
+            padding-left: 14px;
+         }
+         a.hugebutton:hover {
+            border-color: red;
+            color: red;
+         }
+         a.hugebutton:active {
+            background-color: red;
+            color: white;
+         }
+         .gametitle {
+         	font-size: 75px;
+            margin-bottom: 0px;
+            line-height: 1em;
+            text-rendering: optimizeLegibility;
+            color: darkGray;
+            //text-transform: uppercase;
+            //color: #D3A900;
+         }
+         .gameauthors {
+         	margin-bottom: 20px;
+            font-weight: bold;
+         }
+         p.credits {
+         	/*text-transform: uppercase;*/ /*see 5 lines below*/
+            font-weight: bold;
+         }
+         .credits:first-line {
+         	font-style: italic;
+            text-transform: none; /* due to a bug in WebKit, this line won't work in Safari or Chrome*/
+            font-weight: normal;
+         }
+         img.screenshot {
+         	max-width: 760px;
+            max-height: 400px;
+         }
+         div {
+            //background-color: rgba(255,255,255,.1);
+         }
+         </style>
+      
+   </head>
+   <body>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="container-12">     
+         
+         <header class="grid-12" style="margin-top: 20px; margin-bottom: 12px;">
+            <div class="grid-6 alpha">
+               <style>
+                  .smalllogo a{
+                     background: url('img/logotype 3x grey.png'); /* scale factor */
+                     background-position: left top;
+                     background-repeat: no-repeat;
+                     display:block;
+                     margin-left: -93px; /* -31 times the scale factor */
+                     margin-top: -15px; /* -5 times the scale factor */
+                     margin-bottom: -15px;
+                     outline: none;
+                     width: 940px;
+                     height: 81px; /* 27 times the scale factor */
+                  }
+                  .smalllogo a:hover {
+                     background-position: left center;
+                  }
+                  .smalllogo a:active {
+                     background-position: left bottom;
+                  }
+                  </style>
+               <div class="smalllogo" style=""><a class="smalllogo" style="" href="homepage.html"></a></div>
+               
+            </div>
+            <div class="grid-6 omega">
+               <div class="grid-2 alpha">
+                     <a href="Info.html" class="button" style="display: block;
+                                                                                      ">Info</a>
+                  
+               </div>
+               <div class="grid-2">
+                  <a href="Game.html" class="button selected" style="display: block;">
+                        Games
+                  </a>
+               </div>
+               <div class="grid-2 omega">
+                  <a href="" class="button" style="display: block;">
+                        Events
+                  </a>
+               </div>
+            </div>
+         </header>
+         
+         
+         <div class="grid-12">
+            <hr style="border-top-width: 3px; border-top-color: darkGray">
+         </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <!--Title-->
+         <div class="grid-12">
+            <h2 class="gametitle">Kitten Adventure 2</h2>
+            <div class="gameauthors">by <a class="inline" href="">KelseyBot</a>, <a class="inline" href="">EuclidBot</a>, <a class="inline" href="">MarekBot</a></div>
+         </div>
+         
+         
+         
+         <div class="grid-12">
+            
+            
+            
+            
+            
+            
+            <!--Screenshots-->
+         	<div class="grid-9 alpha">
+            	<div style="overflow: hidden;"> <!--This is so I don't have to keep adjusting the width of the contained div.-->
+                  <div style="width: 700px; overflow-x: auto; margin-bottom: 20px; background-color: darkGray; //border-radius: 25px; border-bottom-right-radius: 0px;">
+                     <div style="width: 2280px; ">
+                        <div style="width: 700px; float: left; text-align: center;"><img src="http://placekitten.com/320/400" class="screenshot" style="vertical-align: center;" /></div><div style="width: 760px; float: left; //text-align: center;"><img src="http://placekitten.com/g/760/200" class="screenshot" style="vertical-align: center; "/></div><div style="width: 760px; float: left; //text-align: center;"><img src="http://placekitten.com/760/200" class="screenshot" /></div>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="grid-3 omega">
+               
+               
+               
+               
+               
+               
+               
+               
+               <!--Download Button-->
+               <div class="grid-3 alpha omega" style="/*float: right; margin-top: 12px;*/">
+                  <a href="" class="button awesomebutton" style="display: block;">
+                     Download
+                  </a>
+                  <!--<div class="gameauthors" style="text-align: right;">For Windows, Mac, Linux</div>-->
+               </div>
+               
+               
+               
+               
+               
+               
+               <!--Credits-->
+               <div style="//text-align: right;">
+                  <p class="credits">Level Design:
+                  <br />Marek Kapolka</p>
+                  <p class="credits">Cinematography:
+                  <br />Euclid Sun
+                  <br />Patrick Khachi</p>
+                  <p class="credits">Lighting:
+                  <br />Kelsey Higham</p>
+               </div>
+            	<!--
+                <strong>Marek Kapolka</strong> - Level Design
+                <strong>Euclid Sun</strong> - Cinematography
+                <strong>Sri Sreedharan</strong> - Cinematography
+                -->
+               <!--
+                <i>Level Design</i>
+                <br /><span style="text-transform: uppercase; font-weight: bold">Marek Kapolka</span>
+                <br /><br /><i>Lighting</i>
+                <br /><span style="text-transform: uppercase; font-weight: bold">Euclid Sun</span>
+                <br /><br /><i>3D Modeling</i>
+                <br /><span style="text-transform: uppercase; font-weight: bold">Kelsey Higham</span>
+                -->
+                
+                
+                
+                
+                
+                
+                
+               
+            </div>
+         </div>
+               
+               
+               
+               
+               
+               
+               
+               <!--Paragraph-->
+               <div class="grid-9" style="/*margin-top: 20px;*/ margin-bottom: 20px; font-size: 20px;">
+                  <p>Kittens are basically the most adorable thing in the Universe. We decided to put a bunch of kittens in a videogame, because we figured that we could capitalize on the success of kittens to make our videogame really popular, even if it's pretty much not very good at all. </p>
+                  <p>Instructions:<br />
+                  Go to <a href="" class="inline">the Google</a> and click on "Images", at the top. Type "kittens" into the search box, then click "Image Search". Enjoy.</p>
+               </div>
+               
+               
+               
+               
+               
+               
+               
+               <!--Carousel Buttons-->
+               <!--
+               <div class="grid-3">
+                  <div class="grid-1 alpha">
+                     <a href="" class="buttonholder">
+                        <div class="button carouselbutton" style="border-bottom-left-radius: 25px;">◀</div>
+                     </a>
+                  </div>
+                  <div class="grid-1">
+                     <div class="button carouselbutton" style="border: none;">1/3</div>
+                  </div>
+                  <div class="grid-1 omega">
+                     <a href="" class="buttonholder">
+                        <div class="button carouselbutton" style="border-bottom-right-radius: 25px; border-top-right-radius: 25px;">▶</div>
+                     </a>
+                  </div>
+               </div>
+               -->
+               <!--
+          <div class="grid-3 pull-9">
+          <div class="grid-1">
+          <a href="" class="buttonholder">
+          <div class="button">◀</div>
+          </a>
+          </div>
+          <div class="grid-1">
+          <a href="" class="buttonholder">
+          <div class="button" style="text-align: center; padding-right: 8px;">ıı</div>
+          </a>
+          </div>
+          <div class="grid-1">
+          <a href="" class="buttonholder">
+          <div class="button">▶</div>
+          </a>
+          </div>
+          </div>
+          -->
+               
+               
+               
+               
+               
+               
+               
+               
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <!--Footer-->
+         <footer class="grid-12" style="margin-top: 20px; margin-bottom: 20px;">
+               <a href="" class="button buttonholder" style="float: left; /* changes the height of the span?! */ padding-right: 8px; margin-bottom: 20px; display: block;">◀ Made For the Collaborative Challenge</a>
+         </footer>
+         
+         
+         
+         
+      </div>
+      
+      
+      
+   </body>
+   <!--also, .push-4 and .pull-1-->
+</html>

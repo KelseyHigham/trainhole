@@ -1,0 +1,448 @@
+<!DOCTYPE html />
+<html lang="en">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=1136px" />
+      <title>960 Grid System &mdash; Sandbox</title>
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/text.css" />
+      <link rel="stylesheet" href="css/960.css" />
+      <link rel="stylesheet" href="css/uncompressed/sandbox.css" />
+      
+      <style>
+      	hr {
+         	border-top-width: 3px; 
+            border-top-color: #333;
+            margin-top: 0;
+         }
+         hr.mini {
+         	border-top-width: 2px;
+         }
+      	a {
+         	outline: none;
+            background-color: white;
+         }
+      	a {
+         	color: #333;
+         }
+         a:hover {
+         	color: #333;
+         }
+         a:active {
+            background-color: #333;
+            color: white;
+         }
+         body {
+            color: #333;
+            background-color: white;
+            font-size: 16px; /* WHY IS THIS HERE, I DON'T EVEN KNOW */
+         }
+         a.button {
+         	text-decoration: none;
+            margin-bottom: 20px;
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px; /* with 1.5em line-height and the right border, this comes out to be the same height as the text in the 3x logo */
+            text-transform: uppercase; /* IT'S BETTER THIS WAY */
+            padding-left: 8px; /* to match the already-there padding-top */
+            background-color: white;
+            display: block;
+         }
+         a.button:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.button:active {
+         	border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.awesomebutton {
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px;
+            text-transform: uppercase;
+            padding-left: 8px;
+            margin-bottom: 9px;
+         }
+         a.awesomefacebookbutton {
+         	border-color: #3B5998;
+            color: #3B5998;
+         }
+         a.facebookbutton:hover {
+         	border-color: #3B5998;
+            color: #3B5998;
+         }
+         a.facebookbutton:active {
+         	background-color: #3B5998;
+            border-color: #3B5998;
+            color: white;
+			}
+         a.carouselbutton {
+         	text-align: center;
+            /*background-color: darkGrey;
+             color: white;*/
+            /*border-radius: 51px;*/
+            /*height: 51px;*/
+            text-transform: none;
+            padding-right: 8px;
+         }
+         a.gamebutton {
+            height: 408px; 
+            overflow: hidden; 
+            border: 20px #333 solid;
+         	text-decoration: none;
+            margin-bottom: 20px;
+            text-transform: uppercase; /* IT'S BETTER THIS WAY */
+            display: block;
+            font-weight: bold;
+            line-height: 1;
+         }
+         a.selected {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:hover {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:active {
+            background-color: white;
+            border-color: white;  
+            color: #333;
+         }
+         a.hugebutton {
+            border: solid 5px #333;
+            color: #333; /* overwrite link styling */
+            font-size: 52px; /* I forget why */
+            text-transform: uppercase;
+            padding-left: 14px;
+         }
+         a.hugebutton:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.hugebutton:active {
+            background-color: #333;
+            color: white;
+         }
+         .gametitle {
+         	font-size: 75px; /* so that the cap height matches the height of a.button */
+            margin-bottom: 3px; /*override text.css to make title closer to authors*/
+            line-height: 1em;
+            text-rendering: optimizeLegibility;
+            color: #333;
+            font-weight: bold;
+            /*float: left;
+             display: block;*/
+            /*text-transform: uppercase;*/
+            /*color: #D3A900;*/
+         }
+         .eventtitle {
+         	font-size: 54px; /* So that the cap height matches the x-height of gametitle. It's a typographic scale! */
+            line-height: 1em;
+            font-weight: bold;
+         }
+         .eventlabel {
+         	font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 0;
+            line-height: 1.1em; /* in case of really long locations */
+            display: normal;
+            float: none;
+            color: white;
+            padding-left: 11px; /* 8+3; 8 padding, 3 for absent 3px border */
+            text-align: left;
+         }
+         .eventdetail {
+            font-size: 20px;
+            font-style: normal;
+            color: white;
+            line-height: 1.1em; /* in case of really long locations */
+            display: block;
+            float: left;
+            margin-bottom: 20px;
+         }
+         .gameauthors {
+         	margin-bottom: 20px;
+            font-weight: bold;
+         }
+         p.credits {
+         	/*text-transform: uppercase;*/ /*see 5 lines below*/
+            font-weight: bold;
+         }
+         .credits:first-line {
+         	font-style: italic;
+            text-transform: none; /* due to a bug in WebKit, this line won't work in Safari or Chrome*/
+            font-weight: normal;
+         }
+         img.screenshot {
+         	max-width: 760px;
+            max-height: 400px;
+         }
+         .innerbutton {
+            margin-bottom: 20px;
+         }
+         /*
+          div {
+          background-color: rgba(0,0,0,.05) !important;
+          }
+          span {
+          background-color: rgba(0,0,0,.05) !important;
+          }
+          a {
+          background-color: rgba(0,0,0,.05) !important;
+          }
+          */
+         </style>
+      
+   </head>
+   <body>
+      
+      <div class="container-12">     
+         <!--header-->
+         <header class="grid-12" style="margin-top: 20px; margin-bottom: 12px; padding-top: 20px;">
+            <div class="grid-4 alpha">
+               <style>
+                  .smalllogo a{
+                     background: url('img/logotype 3x short.png'); /* scale factor */
+                     background-position: left top;
+                     background-repeat: no-repeat;
+                     display:block;
+                     margin-left: -93px; /* -31 times the scale factor */
+                     margin-top: -15px; /* -5 times the scale factor */
+                     margin-bottom: -15px;
+                     outline: none;
+                     width: 393px; /* 460{grid-6} + 93{31FS} */
+                     height: 81px; /* 27 times the scale factor */
+                  }
+                  .smalllogo a:hover {
+                     background-position: left center;
+                  }
+                  .smalllogo a:active {
+                     background-position: left bottom;
+                  }
+                  </style>
+               <div class="smalllogo" style=""><a class="smalllogo" style="" href="homepage.html"></a></div>
+               
+            </div>
+            <div class="grid-8 omega">
+               <div class="grid-2 alpha">
+                  <a href="Info.html" class="button" style="">Info</a>
+                  
+               </div>
+               <div class="grid-2">
+                  <a href="Challenge List.html" class="button selected" style="">
+                     Games
+                  </a>
+               </div>
+               <div class="grid-2">
+                  <a href="Event List.html" class="button" style="">
+                     Events
+                  </a>
+               </div>
+               <div class="grid-2 omega">
+                  <a href="" class="button" style="border-style: dotted;">
+                     Log In
+                  </a>
+               </div>
+            </div>
+         </header>
+         
+         
+         
+         
+         <!--title-->
+         <div class="grid-12">
+            <h2 class="eventtitle" style="/text-transform: uppercase;">The SJSU/Cogswell Collaborative Game-Making Challenge</h2>
+         </div>
+         <div class="grid-12">
+            <p ><strong>Starts:</strong> Saturday, October 15, 2010 7:30pm</p>
+            
+            <p ><strong>Ends:</strong> Saturday, October 31, 2010 7:30pm</p>
+         </div>
+         
+         
+         <div class="grid-4">
+            <!--the game itself-->
+            <a class="gamebutton selected" style="" href="Game.html">
+               <!--thumbnail-->
+               <div style="float: left;" class="innerbutton"><img src="http://placekitten.com/260/260" /></div>
+               <!--text-->
+               <span style="font-size: 32px; display: block;">
+                  Mediocre Man
+               </span>
+               <span style="font-size: 16px; display: block;">
+                  A cunning criticism of architecture and city planning, “Your House Is Wet” is indirectly responsible for many of the innovations responsible for the safety and well being of many, many Japanese residents during the recent earthquake and tsunami.
+               </span>
+            </a>
+         </div>
+         
+         
+         <div class="grid-4">
+            <!--the game itself-->
+            <a class="gamebutton selected" style="" href="Game.html">
+               <!--thumbnail-->
+               <div style="float: left;" class="innerbutton"><img src="http://placekitten.com/260/260" /></div>
+               <!--text-->
+               <span style="font-size: 32px; display: block;">
+                  Shmup of Death
+               </span>
+               <span style="font-size: 16px; display: block;">
+                  A cunning criticism of architecture and city planning, “Your House Is Wet” is indirectly responsible for many of the innovations responsible for the safety and well being of many, many Japanese residents during the recent earthquake and tsunami.
+               </span>
+            </a>
+         </div>
+         
+         
+         <div class="grid-4">
+            <!--the game itself-->
+            <a class="gamebutton selected" style="" href="Game.html">
+               <!--thumbnail-->
+               <div style="float: left;" class="innerbutton">
+          <iframe title="YouTube video player" width="260" height="260" src="http://www.youtube.com/embed/CD2LRROpph0" frameborder="0" allowfullscreen></iframe></div>
+               <!--text-->
+               <span style="font-size: 32px; display: block;">
+                  Super Hostile Mega Uber Protector
+               </span>
+               <span style="font-size: 16px; display: block;">
+                  A cunning criticism of architecture and city planning, “Your House Is Wet” is indirectly responsible for many of the innovations responsible for the safety and well being of many, many Japanese residents during the recent earthquake and tsunami.
+               </span>
+            </a>
+         </div>
+         
+         
+         <div class="grid-4">
+            <!--the game itself-->
+            <a class="gamebutton selected" style="" href="Game.html">
+               <!--thumbnail-->
+               <div style="float: left;" class="innerbutton"><iframe src="http://player.vimeo.com/video/6277276?portrait=0&amp;color=f0000c" width="260" height="260" frameborder="0"></iframe></div>
+               <!--text-->
+               <span style="font-size: 32px; display: block;">
+                  Intergalactic Planetary Super Showdown
+               </span>
+               <span style="font-size: 16px; display: block;">
+                  A cunning criticism of architecture and city planning, “Your House Is Wet” is indirectly responsible for many of the innovations responsible for the safety and well being of many, many Japanese residents during the recent earthquake and tsunami.
+               </span>
+            </a>
+         </div>
+         
+         
+         <div class="grid-4">
+            <!--the game itself-->
+            <a class="gamebutton" style="border: 12px dotted; text-align: center; padding: 8px;" href="Game.html">
+               <!--thumbnail-->
+               <div style="font-size: 260px; line-height: 1;" class="innerbutton">+</div>
+               <!--text-->
+               <span style="font-size: 64px; display: block;">
+                  Add a Game
+               </span>
+            </a>
+         </div>
+         
+         
+         
+         <!--video embed code-->
+         <!--
+          <iframe src="http://player.vimeo.com/video/6277276?portrait=0&amp;color=f0000c" width="260" height="260" frameborder="0"></iframe>
+          <iframe title="YouTube video player" width="260" height="260" src="http://www.youtube.com/embed/CD2LRROpph0" frameborder="0" allowfullscreen></iframe>
+          -->
+         
+         
+         
+         <div class="grid-12" style="margin-bottom: 20px;">
+            
+            
+            
+            
+            <!--flavor text-->
+            <div class="grid-6 alpha">
+               <h3>Description</h3>
+               <p>Our first game development challenge starts in two weeks, but you need to form your teams now! For the first time ever, we will be collaborating with students at Cogswell Polytechnical College. Through collaboration, we hope to get several teams that each have dedicated programmers and artists, as well as game designers and others.</p>
+               <p>To get the teams formed for this challenge, please post on this Google group, even if you plan to work independently or already have a team planned: The Cogswell and SJSU Collaborative Game Challenge Google Group. Following the example (the readme post), please state your skills and the type of team or team members that you’d like to work with. In a week or so, participants can then go through the list to find team members.</p>
+               
+               The Collaborative Game Challenge starts now!
+               Game entries are due on October 7, 2009.
+               
+               Students from SJSU and Cogswell Polytechnical College are working together to make games. Although some teams have been formed already, you can still use this <a href="http://groups.google.com/group/the-cogswell-and-sjsu-collaborative-game-challenge">Google group</a> to find or form a team. Following <a href="http://groups.google.com/group/the-cogswell-and-sjsu-collaborative-game-challenge/browse_thread/thread/5ad5b5c9a289c1ee#">these instructions</a>, students are posting to list their skills and the types of teams they would like to join. If you haven't posted yet, please do, then either try to start a team or ask others if you can join their team.
+               
+               Challenge dates:
+               
+               <ul>
+                  <li>Thursday September 10th: rules are announced and challenge starts</li>
+                  <li>Thursday September 24th: (optional) teams may presents previews of their games</li>
+                  <li>Wednesday October 7th: game entries are due by email</li>
+                  <li>Thursday October 8th: teams will present their games</li>
+                  <li>October 15-21: team members vote for the best entries (see website for details)</li>
+                  <li>Thursday October 22: winners are announced and prizes are awarded</li>
+               </ul>
+               
+               Main rules:
+               
+               <ul>
+                  <li>Game entries must match at least one of these tags / themes: <a href="http://en.wikipedia.org/wiki/Fourth_wall#Video_games">4th wall</a>, building, coloring, and gravity</li>
+                  <li>Game must be completable in less than five minutes</li>
+                  <li>Teams must have 1 - 5 people, from Cogswell / SJSU</li>
+                  <li>Code and artwork must be made by the team members</li>
+               </ul>
+               
+            </div>
+            
+            <!--rules-->
+            <div class="grid-6 omega">
+             
+               <h3>Complete rules</h3>
+               
+               The challenge starts on Thursday, September 10, 2009
+               Entries must be received by Thursday, October 8, 2009 at 8AM. (That means, submit on the previous day.)
+               Games will be presented at the SJSU Game Dev meeting on Thursday, October 8, 2009
+               
+               Challenge entry rules:
+               
+               <ul>
+                  <li>The game must be fully completable in less than five minutes</li>
+                  <li>The game must match one of these tags: <a href="http://en.wikipedia.org/wiki/Fourth_wall#Video_games">4th wall</a>, building, coloring, and gravity.</li>
+               </ul>
+               
+               To be eligible for prizes:
+               
+               <ul>
+                  <li>Teams must announce their team name and members on the Challenge Google Group (one post per team), by Thursday, September 24</li>
+                  <li>Teams must have 1 - 5 people, and people cannot be on multiple teams. Team members must be associated with either Cogswell or SJSU</li>
+                  <li>The SJSU Game Dev Club must receive permission to post at least one of the following for each entry on the website: executable, source, screenshots, or presentation video</li>
+                  <li>The game and its code (excepting code libraries) must be new and made by team members, after the start date of the competition</li>
+                  <li>All artwork must be created by members of the team</li>
+                  <li>The team must either make included sound and music, or get permission for all sound and music used</li>
+                  <li>At least one member of each team must be present at the meeting on Thursday, October 8 to demo their game. (For non-Windows games: bring your own laptop!)</li>
+               </ul>
+               
+               Submissions:
+               
+               <ul>
+                  <li>Submissions must be received at <a href="mailto:kristopherwindsor@gmail.com">kristopherwindsor@gmail.com</a> before 8AM, Thursday, October 8, 2009</li>
+                  <li>Submissions should include all of the following: game name, source code, Windows executable (not necessary for Linux / Mac - only games) or SWF / link to SWF, two screenshots, list of team members / positions and team name, and what the team will allow on the website (ie do they want the source code posted?)</li>
+               </ul>
+               
+               Judging and prizes:
+               
+               <ul>
+                  <li>Games will be posted on the SJSU Game Dev website by Thursday, October 15, so everyone can review them</li>
+                  <li>Every member of each team that submits a game should review the games after that date, pick two different games to vote for (members cannot vote for their own games), and email their votes to <a href="mailto:kristopherwindsor@gmail.com">kristopherwindsor@gmail.com</a> by Wednesday, October 21 (voting is optional)</li>
+                  <li>The two games with the most votes will win * (in case of tie: prizes will be awarded to 3 teams if there is a 2-way tie for second or 3-way tie for first; other ties will be broken with some form of re-voting)</li>
+                  <li>Each member of the winning teams will receive one prize (prizes include XBox 360 games, PC games, and a variety of Microsoft hardware)</li>
+                  <li>Prizes will be awarded at the meeting two weeks after the game presentations, on Thursday, October 22 (members do not need to be present to collect prizes)</li>
+               </ul>
+               
+               * At some point before the challenge ends, we may announce that more than two teams will win (don't count on it)
+            </div>
+         </div>
+         
+         
+      </div>
+      
+      
+      
+   </body>
+</html>

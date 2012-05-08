@@ -1,0 +1,4 @@
+steam: hsl(93, 28%, 20%)
+facebook: hsl(232, 41%, 36%)
+google: hsl(0, 96%, 39%)
+arcade: hsl(39, 99%, 46%)

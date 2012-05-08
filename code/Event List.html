@@ -1,0 +1,384 @@
+<!DOCTYPE html />
+<html lang="en">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=1136px" />
+      <title>960 Grid System &mdash; Sandbox</title>
+      <link rel="stylesheet" href="css/reset.css" />
+      <link rel="stylesheet" href="css/text.css" />
+      <link rel="stylesheet" href="css/videotext.css" />
+      <link rel="stylesheet" href="css/960.css" />
+      <link rel="stylesheet" href="css/uncompressed/sandbox.css" />
+      
+      <style>
+      	hr {
+         	border-top-width: 3px; 
+            border-top-color: #333;
+            margin-top: 0;
+         }
+         hr.mini {
+         	border-top-width: 2px;
+         }
+      	a {
+         	outline: none;
+            background-color: white;
+         }
+      	a {
+         	color: #333;
+         }
+         a:hover {
+         	color: #333;
+         }
+         a:active {
+            background-color: #333;
+            color: white;
+         }
+         body {
+            color: #333;
+            background-color: white;
+            font-size: 16px; /* WHY IS THIS HERE, I DON'T EVEN KNOW */
+         }
+         a.button {
+         	text-decoration: none;
+            margin-bottom: 20px;
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px; /* with 1.5em line-height and the right border, this comes out to be the same height as the text in the 3x logo */
+            text-transform: uppercase; /* IT'S BETTER THIS WAY */
+            padding-left: 8px; /* to match the already-there padding-top */
+            background-color: white;
+            display: block;
+         }
+         a.button:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.button:active {
+         	border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.awesomebutton {
+         	border: solid 3px #333;
+            color: #333;
+            font-size: 32px;
+            text-transform: uppercase;
+            padding-left: 8px;
+            margin-bottom: 9px;
+         }
+         a.awesomefacebookbutton {
+         	border-color: #3B5998;
+            color: #3B5998;
+         }
+         a.facebookbutton:hover {
+         	border-color: #3B5998;
+            color: #3B5998;
+         }
+         a.facebookbutton:active {
+         	background-color: #3B5998;
+            border-color: #3B5998;
+            color: white;
+			}
+         a.carouselbutton {
+         	text-align: center;
+            /*background-color: darkGrey;
+             color: white;*/
+            /*border-radius: 51px;*/
+            /*height: 51px;*/
+            text-transform: none;
+            padding-right: 8px;
+         }
+         a.gamebutton {
+            overflow: hidden; 
+            padding-left: 12px; /* to match the top and bottom */
+            /*padding-right: 12px;*/ /* it's nicer… but this bit of CSS doesn't seem to do anything */
+            
+            
+         }
+         a.selected {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:hover {
+            border-color: #333;
+            background-color: #333;
+            color: white;
+         }
+         a.selected:active {
+            background-color: white;
+            border-color: white;  
+            color: #333;
+         }
+         a.hugebutton {
+            border: solid 5px #333;
+            color: #333; /* overwrite link styling */
+            font-size: 52px; /* I forget why */
+            text-transform: uppercase;
+            padding-left: 14px;
+         }
+         a.hugebutton:hover {
+            border-color: #333;
+            color: #333;
+         }
+         a.hugebutton:active {
+            background-color: #333;
+            color: white;
+         }
+         .gametitle {
+         	font-size: 75px; /* so that the cap height matches the height of a.button */
+            margin-bottom: 3px; /*override text.css to make title closer to authors*/
+            line-height: 1em;
+            text-rendering: optimizeLegibility;
+            color: #333;
+            font-weight: bold;
+            /*float: left;
+             display: block;*/
+            /*text-transform: uppercase;*/
+            /*color: #D3A900;*/
+         }
+         .pagetitle {
+         	font-size: 64px; /* 54px makes the cap height matches the x-height of gametitle. It's a typographic scale! */
+            line-height: 1em;
+            font-weight: bold;
+         }
+         .eventlabel {
+         	font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 0;
+            line-height: 1.1em; /* in case of really long locations */
+            display: normal;
+            float: none;
+            color: white;
+            padding-left: 11px; /* 8+3; 8 padding, 3 for absent 3px border */
+            text-align: left;
+         }
+         .eventdetail {
+            font-size: 20px;
+            font-style: normal;
+            color: white;
+            line-height: 1.1em; /* in case of really long locations */
+            display: block;
+            float: left;
+            margin-bottom: 20px;
+         }
+         .gameauthors {
+         	margin-bottom: 20px;
+            font-weight: bold;
+         }
+         p.credits {
+         	/*text-transform: uppercase;*/ /*see 5 lines below*/
+            font-weight: bold;
+         }
+         .credits:first-line {
+         	font-style: italic;
+            text-transform: none; /* due to a bug in WebKit, this line won't work in Safari or Chrome*/
+            font-weight: normal;
+         }
+         img.screenshot {
+         	max-width: 760px;
+            max-height: 400px;
+         }
+         .innerbutton {
+         	margin-top: 12px;    /* try to match the spacing of a.button's */
+            margin-bottom: 12px; /* text   								  		   */
+         }
+         a.darklink {
+            background-color: #333; color: white; text-decoration: none;
+         }
+         a.darklink:active {
+            background-color: white; color: #333;
+         }
+         /*
+          div {
+          background-color: rgba(0,0,0,.05) !important;
+          }
+          span {
+          background-color: rgba(0,0,0,.05) !important;
+          }
+          a {
+          background-color: rgba(0,0,0,.05) !important;
+          }
+          /**/
+         </style>
+      
+   </head>
+   <body>
+      
+      <div class="container-12">     
+         <!--header-->
+         <header class="grid-12" style="margin-top: 20px; margin-bottom: 12px; padding-top: 20px;">
+            <div class="grid-4 alpha">
+               <style>
+                  .smalllogo a{
+                     background: url('img/logotype 3x short.png'); /* scale factor */
+                     background-position: left top;
+                     background-repeat: no-repeat;
+                     display:block;
+                     margin-left: -93px; /* -31 times the scale factor */
+                     margin-top: -15px; /* -5 times the scale factor */
+                     margin-bottom: -15px;
+                     outline: none;
+                     width: 393px; /* 460{grid-6} + 93{31FS} */
+                     height: 81px; /* 27 times the scale factor */
+                  }
+                  .smalllogo a:hover {
+                     background-position: left center;
+                  }
+                  .smalllogo a:active {
+                     background-position: left bottom;
+                  }
+                  </style>
+               <div class="smalllogo" style=""><a class="smalllogo" style="" href="homepage.html"></a></div>
+               
+            </div>
+            <div class="grid-8 omega">
+               <div class="grid-2 alpha">
+                  <a href="Info.html" class="button" style="">Info</a>
+                  
+               </div>
+               <div class="grid-2">
+                  <a href="Challenge List.html" class="button" style="">
+                     Games
+                  </a>
+               </div>
+               <div class="grid-2">
+                  <a href="Event List.html" class="button selected" style="">
+                     Events
+                  </a>
+               </div>
+               <div class="grid-2 omega">
+                  <a href="" class="button" style="border-style: dotted;">
+                     Log In
+                  </a>
+               </div>
+            </div>
+         </header>
+         
+         <div style="text-align: left;">
+<div class="grid-12">
+            <h2>Events and Meetings</h1>
+</div>
+            <div class="grid-3">
+               <h3>Past Events</h3>
+               <a href="Event.html" class="darklink" style=" padding: 20px; margin-bottom: 20px; display: block;">
+                  
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+            </div>
+            <div class="grid-6">
+               <h3>Upcoming Events</h3>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 32px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 16px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 16px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 32px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 16px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 16px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 32px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 16px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 16px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <div style="font-size: 32px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 16px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 16px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+            </div>
+            <div class="grid-3">
+               <h3>Great Events</h3>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <img src="http://placekitten.com/180/300" />
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <img src="http://placekitten.com/180/100" />
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <img src="http://placekitten.com/180/180" />
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+               <a href="Event.html" style="text-decoration: none;">
+                  <div class="smallevent" style="padding: 20px; background-color: #333; color: white; margin-bottom: 20px;">
+                     <img src="http://placekitten.com/180/200" />
+                     <div style="font-size: 16px;">Meeting: Cryptic Studios's Brian Urbanek on Design</div>
+                     <div style="font-size: 8px;">Ohlone Room in the Student Union</div>
+                     <div style="font-size: 8px;">Tuesday, August 13th, 7:30pm-9:30pm</div>
+                  </div>
+               </a>
+            </div>
+         </div>
+         
+         <!--video embed code-->
+         <!--
+          <iframe src="http://player.vimeo.com/video/6277276?portrait=0&amp;color=f0000c" width="140" height="105" frameborder="0" class="grid_2"></iframe>
+          <iframe title="YouTube video player" width="125" height="125" src="http://www.youtube.com/embed/CD2LRROpph0" frameborder="0" allowfullscreen></iframe>
+          -->
+         
+         
+         
+         
+         
+         
+      </div>
+      
+      
+      
+   </body>
+</html>

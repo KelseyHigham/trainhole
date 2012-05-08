@@ -1,0 +1,776 @@
+/* $Id: styles.css,v 1.1.2.2.2.1 2011/01/11 01:08:49 dvessel Exp $ */
+
+h1#site-name {
+margin-bottom: 0;
+}
+
+#site-header,
+#site-subheader,
+#footer-region,
+.column,
+.node,
+.comment,
+.block {
+margin-bottom: 1.5em;
+}
+
+ul.main-menu,
+ul.secondary-menu {
+display: block;
+margin: 0;
+padding: 0;
+}
+
+
+/* START OF THE REAL STUFF */
+
+hr {
+border-top-width: 3px; 
+border-top-color: #333;
+margin-top: 0;
+}
+hr.mini {
+border-top-width: 2px;
+}
+a {
+/*outline: none;*/
+}
+a {
+color: #934C00;
+border-color: #934C00;
+text-decoration: none;
+}
+a:active {
+background-color: #934C00;
+color: white;
+border-color: #934C00;
+}
+body {
+color: #333;
+background-color:white;
+font-size: 16px; /* WHY IS THIS HERE, I DON'T EVEN KNOW */
+}
+header:active a.tab.darkLink {
+border-color: #333; 
+background-color: white;
+color: #333;
+}
+.button {
+text-decoration: none;
+margin-bottom: 20px;
+border: solid 3px #333;
+color: #333;
+font-size: 32px; /* with 1.5em line-height and the right border, this comes out to be the same height as the text in the 3x logo */
+text-transform: uppercase; /* IT'S BETTER THIS WAY */
+background-color: white;
+display: block;
+}
+span.button {
+padding-left: 8px; /* to match the already-there padding-top */
+}
+a.button {
+padding: 0 8px; /* to match the already-there padding-top */
+text-align: center;
+}/*
+a.button:hover {
+border-color: #333;
+color: #333;
+}*/
+.button:active {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+button.button {
+width: 100%;
+height: 48px;
+}
+		
+/* TABS */
+/*
+a.tab {
+border-radius: 0;
+margin-bottom: 0;
+}
+a.tab:active {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+a.tab.selected {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+a.tab.selected:active {
+background-color: white;
+border-color: #333;  
+color: #333;
+}		
+header:active a.tab.selected {
+border-color: #333; 
+background-color: white;
+color: #333;
+}
+*/
+		
+/* NEW, GLOWY TABS */
+		
+a.tab {
+border-radius: 0;
+margin-bottom: 0;
+border-color: hsl(0, 0%, 85%) hsl(0, 0%, 79%) hsl(0, 0%, 74%);
+background-color: hsl(0, 0%, 79%);
+color: white;
+border-width: 3px 0 3px;
+-webkit-transition-property: color, background-color, border-color;
+-webkit-transition-duration: 60s;
+-moz-transition-property: color, background-color, border-color;
+-moz-transition-duration: 60s;
+-o-transition-property: color, background-color, border-color;
+-o-transition-duration: 60s;
+}
+a.tab:active {
+border-color:  #f4d900 #f9c200 #f9ae00 ;
+background-color: #f9c200;
+color: white;
+-webkit-transition-duration: 0s;
+-moz-transition-duration: 0s;
+-o-transition-duration: 0s;
+}
+a.tab.selected {
+border-color: #f4d900 #f9c200 #f9ae00;
+background-color: #f9c200;
+color: white;
+-o-transition-duration: 60s;
+-moz-transition-duration: 60s;
+-webkit-transition-duration: 60s;
+}
+a.tab.selected:active {
+border-color: hsl(0, 0%, 85%) hsl(0, 0%, 79%) hsl(0, 0%, 74%);
+background-color: hsl(0, 0%, 79%);
+color: white;
+}		
+header:active a.tab.selected {
+border-color: hsl(0, 0%, 85%) hsl(0, 0%, 79%) hsl(0, 0%, 74%);
+background-color: hsl(0, 0%, 79%);
+color: white;
+-webkit-transition-duration: 0s;
+-moz-transition-duration: 0s;
+-o-transition-duration: 0s;
+}
+		
+		
+		
+
+a.awesomefacebookbutton {
+border-color: #3B5998;
+background-color: #3B5998;
+color: white;
+}
+a.awesomefacebookbutton:hover {
+border-color: #3B5998;
+background-color: #3B5998;
+color: white;
+}
+a.awesomefacebookbutton:active {
+border-color: #3B5998;
+background-color: white;
+color: #3B5998;
+}
+a.facebookbutton:hover {
+border-color: #3B5998;
+color: #3B5998;
+}
+a.facebookbutton:active {
+background-color: #3B5998;
+border-color: #3B5998;
+color: white;
+}
+a.carouselbutton {
+text-align: center;
+/*background-color: darkGrey;
+color: white;*/
+/*border-radius: 51px;*/
+/*height: 51px;*/
+text-transform: none;
+padding-right: 8px;
+}
+a.darkLink {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+a.darkLink:hover {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+a.darkLink:active {
+background-color: white;
+border-color: #333;  
+color: #333;
+}
+a.lightLink {
+background-color: white;
+color: #333;
+}
+a.lightLink:active {
+background-color: #333;
+color: white;
+}
+header a.tab.darkLink {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+header a.tab.darkLink:hover {
+border-color: #333;
+background-color: #333;
+color: white;
+}
+header a.tab.darkLink:active {
+background-color: white;
+border-color: #333;  
+color: #333;
+}
+a.hugebutton {
+border: solid 5px #333;
+color: #333; /* overwrite link styling */
+font-size: 52px; /* I forget why */
+text-transform: uppercase;
+padding-left: 14px;
+}
+a.hugebutton:hover {
+border-color: #333;
+color: #333;
+}
+a.hugebutton:active {
+background-color: #333;
+color: white;
+}
+a#loginbutton {
+/*width: auto;
+min-width: 118px;*/
+width: 118px;
+border-right-width: 3px;
+height: 48px;
+padding-right: 8px;
+overflow: hidden;
+white-space: nowrap;
+float: left;
+top: 40px;
+}
+a#loginbutton:hover {
+width: auto;
+border-right-width: 3px;
+min-width: 118px;
+}
+a#loginbutton:active {
+overflow: visible;
+width: auto;
+min-width: 118px;
+}
+.gametitle {
+font-size: 75px;
+margin-bottom: 3px; /*override text.css to make title closer to authors*/
+line-height: 1em;
+text-rendering: optimizeLegibility;
+color: #333;
+font-weight: bold;
+/*float: left;
+display: block;*/
+/*text-transform: uppercase;*/
+/*color: #D3A900;*/
+}
+.eventtitle {
+font-size: 60px;
+line-height: 1em;
+font-weight: bold;
+}
+.eventlabel {
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 0;
+line-height: 1.1em; /* in case of really long locations */
+display: normal;
+float: none;
+color: white;
+padding-left: 11px; /* 8+3; 8 padding, 3 for absent 3px border */
+text-align: left;
+}
+.eventdetail {
+font-size: 20px;
+font-style: normal;
+color: white;
+line-height: 1.1em; /* in case of really long locations */
+display: block;
+float: left;
+margin-bottom: 20px;
+}
+.gameauthors {
+margin-bottom: 20px;
+font-style: italic;
+}
+div.screenshot {
+width: 700px; 
+float: left; 
+text-align: center; 
+min-height: 1px;
+}
+.screenshot img {
+max-width: 100%;
+max-height: 90%;
+line-height: 1em;
+vertical-align: bottom;
+}
+* {
+/*background-color: rgba(0,0,0,.1) !important;/**/
+}   
+.chin {
+margin-bottom: 20px;
+}
+
+/* GAMEBOX */
+
+a.gamebox {
+height: 408px; 
+overflow: hidden; 
+border-width: 5px;
+border-style: solid;
+padding:15px;
+/*border-bottom: 20px #333 solid;
+padding-bottom:0;*/
+text-decoration: none;
+margin-bottom: 20px;
+text-transform: uppercase; /* IT'S BETTER THIS WAY */
+display: block;
+font-weight: bold;
+text-align: center;
+line-height: 1;
+font-size: 32px;
+/*            border-radius: 20px;*/
+}
+a.gamebox span {
+height: 128px;
+overflow: hidden;
+display: block;
+}
+a.gamebox div {
+height: 260px;
+width: 260px;
+margin-bottom: 20px;
+position: relative;
+}
+a.gamebox div img {
+max-width: 260px;
+max-height: 260px;
+position: absolute;
+margin: auto;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+/*            border-radius: 40px/130px;*/
+}
+a.gamebox p {
+font-size: 16px;
+}
+		
+/* HORIZONTAL GAMEBOX (wip) */
+
+a.horizontalgamebox {
+height: 260px; 
+width: 580px;
+overflow: hidden; 
+border: 5px #333 solid;
+padding:15px;
+/*border-bottom: 20px #333 solid;
+padding-bottom:0;*/
+text-decoration: none;
+margin-bottom: 40px;
+text-transform: uppercase; /* IT'S BETTER THIS WAY */
+display: block;
+font-weight: bold;
+text-align: center;
+line-height: 1;
+font-size: 32px;
+float: left;
+/*            border-radius: 20px;*/
+}
+a.horizontalgamebox div.horizontalgameboxscreenshot {
+height: 260px;
+width: 260px;
+margin-bottom: 20px;
+position: relative;
+float: left;
+margin-right: 40px;
+}
+a.horizontalgamebox div.horizontalgameboxscreenshot img {
+max-width: 260px;
+max-height: 260px;
+position: absolute;
+margin: auto;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+/*            border-radius: 40px/130px;*/
+}
+a.horizontalgamebox span.horizontalgameboxfixedheight {
+height: 160px;
+overflow: hidden;
+display: block;
+margin: 20px;
+}
+a.horizontalgamebox p.horizontalgameboxtext {
+font-size: 16px;
+}
+a.horizontalgamebox div.horizontalonelinescreenshot img {
+	height: 62px;
+	top: -15px;
+	right: -15px;
+	position: relative;
+}
+
+		
+		
+
+
+/* EXTERNAL LINKS ON PROFILE PAGES */
+
+a.external {
+color: white;
+/* border: 0px; */
+}
+a.external:hover {
+color: white;
+}
+a.colored {
+color: white;
+text-transform: none;
+/* border: 0px; */
+}
+a.frontpagecolored {
+font-size: 24px;
+color: white;
+text-transform: none;
+}
+a.frontpagecolored:hover {
+color: white;
+}
+a.coloredgroup {
+color: white;
+float: right;
+margin-left: 0px;
+text-transform: none;
+padding-right: 11px;
+/*            font-style: italic;*/
+border-width: 0 0 0 20px;
+line-height: 54px;
+border-left-color: white !important;
+position: relative;
+top: -54px;
+}
+a.colored:hover {
+color: white;
+}
+a.steamurl {
+background-color: #49583C;
+border-color: #49583C;
+}
+a.twitterurl { 
+background-color: #53C9FF;
+border-color: #53C9FF;
+}
+a.deviantarturl {
+background-color: #425244;
+border-color: #425244;
+}
+a.linkedinurl {
+background-color: #1C7EAB;
+border-color: #1C7EAB;
+}
+a.facebookurl {
+background-color: #3B5998;
+border-color: #3B5998;
+}
+a.arcadeurl {
+background-color: hsl(182, 92%, 40%);
+border-color: hsl(182, 92%, 40%);
+}
+a.googleplusurl {
+background-color: #DD4B39;
+border-color: #DD4B39;
+}
+a.googlegroupsurl {
+background-color: #E62E19;
+border-color: #E62E19;
+}
+a.websiteurl {
+background-color: blue;
+border-color: blue;
+width: 198px;
+overflow: hidden;
+height: 48px;
+float: left;
+position: relative;
+}
+a.websiteurl:hover {
+width: auto;
+min-width: 198px;
+}
+a.websiteurl:visited {
+background-color: purple;
+border-color: purple;
+} 
+a.websiteurl:active {
+background-color: red;
+border-color: red;
+}
+a.logout {
+background-color: red;
+border-color: red;
+}
+.antiwrapper {
+margin-left: -170px; 
+margin-right: -170px;
+}
+.icon {
+vertical-align: -3px;
+/*            padding-left: 4px;*/
+}
+
+
+/* FORM STYLING */
+form>div>div.form-wrapper {
+background-color: #EEE;
+margin: 1em 0;
+padding: .1em 1em;
+box-shadow: 0 0 5px #eee;
+border-radius: 1em;
+}
+.filter-wrapper {
+border: 1px solid #DDD;
+border-top: 0;
+padding: 0 0 1em;
+}
+.filter-help {
+margin: 1em 0em;
+}
+
+/* EVENTS PAGE */
+
+a.event {
+font-weight: normal;
+margin-bottom: 20px;
+display: block;
+text-decoration: none;
+line-height: 1.5em;
+padding: 20px;
+background: lightYellow;
+color: #333;
+/*			box-shadow: 0 1px 3px olive;*/
+font-family: georgia, serif;
+font-style: italic;
+text-transform: lowercase;
+/*			text-shadow: 0 1px 0 white;*/
+outline: none;
+border-style: solid;
+border-color: rgba(0,0,0,.1);
+}
+a.event:hover {
+background: lightYellow;
+border-color: rgba(0,0,0,.1);
+color: #333;
+}
+a.event:active {
+background: hsl(60, 100%, 85%);
+color: #333;
+}
+a.event.stack {
+background-color: lightYellow;
+border-bottom: 6px double rgba(0,0,0,.1);
+}
+a.event.stack:active {
+position: relative;
+top: 4px;
+border-bottom: 2px solid rgba(0,0,0,.1);
+margin-bottom: 24px;
+}
+.event.large {
+line-height: 3em;
+text-transform: none;
+border-width: 5px;
+padding: 7px 15px 0px; /* this actually goes over, at the bottom, by 5 pixels */
+}
+.event.small {
+border-width: 2px;
+/*			padding: 18px;*/
+/* the following line is not necessarily correct yet! */
+padding: 14px 18px 8px; /* accounting for border-width, line-height, and margin-bottom: 20px */
+}
+.event .title {
+margin-bottom: .5em;
+line-height: 1.5em;
+}
+.event .caption {
+/*            white-space: nowrap;*/
+overflow: hidden;
+line-height: 1.5em;
+margin-bottom: 1.25em;
+max-height: 2.75em;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+.event.large .title {
+font-size: 32px;
+}
+.event.large .caption {
+font-size: 16px;
+}
+.event.small .title {
+font-size: 16px;
+}
+.event.small .caption {
+font-size: 8px;
+}
+.event h1, .event h2, .event h3, .event h4, .event h5, .event h6 {
+font-weight: normal;
+margin-bottom: 0px;
+line-height: 1.5em;
+}
+.event.large img {
+max-width: 420px;
+margin: 8px 0 -8px;
+}
+.event.small img {
+max-width: 180px;
+margin-top: 4px;
+}
+		
+		
+/* KEYBOARD STYLING */
+		
+kbd {
+line-height: 1em;
+background-color: beige;
+-webkit-font-smoothing: antialiased;/**/
+color: black;
+font-family: helvetica neue, lucida grande, calibri, arial, courier new, sans-serif;
+font-weight: bold;/**/
+/*font-style: italic;/**/
+min-width: 1em;/**/
+/*min-height: 1em;/**/
+cursor: pointer;/**/
+display: inline-block;
+text-align: center;
+text-rendering: optimizeLegibility;
+padding: 0.125em 0.1875em .25em;/**/
+margin: 0.125em;/**/
+box-shadow: 0 0.0625em 0.125em hsla(0,0%,0%,.5);
+-moz-box-shadow: 0 0.0625em 0.0625em hsla(0,0%,0%,.5);
+text-shadow: 0 0.0625em hsla(0,0%,100%,.5);/**/
+background-image: -webkit-linear-gradient(
+hsla(0, 0%, 100%, .05), 
+hsla(0, 0%, 0%, .05) 5%,
+hsla(0, 0%, 100%, .05) 95%, 
+hsla(0, 0%, 0%, .05)
+), 
+-webkit-linear-gradient(hsla(0, 0%, 0%, 0), 
+hsla(0, 0%, 0%, 0));
+background-image: 
+-moz-linear-gradient(
+hsla(0, 0%, 100%, .05), 
+hsla(0, 0%, 0%, .05) 5%,
+hsla(0, 0%, 100%, .05) 95%, 
+hsla(0, 0%, 0%, .05)
+), 
+-moz-linear-gradient(hsla(0, 0%, 0%, 0), 
+hsla(0, 0%, 0%, 0));
+background-image: 
+-o-linear-gradient(
+hsla(0, 0%, 100%, .05), 
+hsla(0, 0%, 0%, .05) 5%,
+hsla(0, 0%, 100%, .05) 95%, 
+hsla(0, 0%, 0%, .05)
+), 
+-o-linear-gradient(hsla(0, 0%, 0%, 0), 
+hsla(0, 0%, 0%, 0));
+background-clip: padding-box, border-box;
+border-style: solid;/**/
+border-width: 0.0625em 0.125em 0.1875em;
+border-radius: 0px;
+border-color: rgba(0, 0, 0, .05) rgba(0, 0, 0, .085) rgba(0, 0, 0, .3);
+white-space: pre;
+display: inline-block;
+}
+kbd:active {
+position: relative;
+top: 0.125em;/**/
+border-bottom-width: 0.0625em;
+margin-bottom: .25em;
+box-shadow: 0 0.0625em 0.0625em hsla(0,0%,0%,.5);
+}
+kbd::selection {
+background-color: rgba(0,0,0,0);
+}
+kbd::-moz-selection {
+background-color: rgba(0,0,0,0);
+}
+kbd:empty::before {
+content: "empty <kbd></kbd> tags";
+}
+kbd.invisible {
+opacity: 0;
+cursor: auto;/**/
+-webkit-transition: 1s;
+-moz-transition: 1s;
+background-clip: border-box;
+}
+kbd.invisible:active {
+top: 0;
+border-bottom-width: 0.1875em;
+margin-bottom: 0.125em;
+opacity: .5;
+}
+kbd.box {
+line-height: 1em; 
+background-color: transparent;
+color: beige;
+cursor: default;
+text-align: left;
+padding: 0;
+margin: 0;
+box-shadow: none;
+background-image: none;
+border-width: 0;
+white-space: normal;
+}
+kbd.box:active {
+position: static;
+}
+kbd kbd {
+display: none;
+}
+kbd.box>kbd {
+display: inline-block;
+}
+        
+		
+/* CODE */
+		
+code {
+background-color: rgba(0, 191, 255, .2);
+}
+code strong {
+background-color: rgba(0, 191, 255, .5);
+}
+		
+/* FRONT-PAGE POSTS */
+		
+.post {
+margin-bottom: 50px;
+}
