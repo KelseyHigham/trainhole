@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=1136px" />
+    <meta name="viewport" content="width=1136" />
 
     <style>
 	
@@ -87,7 +87,7 @@
     <!--this is so that the username stays in place-->
     <!--modified from http://www.finefrog.com/2007/02/26/faking-css-position-fixed-in-internet-explorer-6/ -->
     <script type="text/javascript">  
-	
+	mouseIsOver = false;
         window.onscroll = ( 
         function() {
             if (mouseIsOver) {
@@ -201,7 +201,78 @@ if (isset($node)) {
                     <div class="grid-3 alpha"><a href="https://www.facebook.com/groups/sjsugamedev/" class="frontpagecolored facebookurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'facebook.com');"><img src="sites/all/themes/trainhole/images/facebook 3x white.png" class="icon"> Facebook Group</a></div>
                     <div class="grid-3"><a href="http://steamcommunity.com/groups/SJSUGameDev" class="frontpagecolored steamurl button" onClick="recordOutboundLink(this, 'Outbound Links', 'steamcommunity.com');"><img src="sites/all/themes/trainhole/images/steam 3x white.png" class="icon"> Steam Group</a></div>
                     <div class="grid-3"><a href="http://groups.google.com/group/sjsu-video-game-development-club" class="frontpagecolored googlegroupsurl button" onClick="recordOutboundLink(this, 'Outbound Links', 'groups.google.com');"><img src="sites/all/themes/trainhole/images/mail 3x white.png" class="icon"> Google Group</a></div>
-                    <div class="grid-3 omega"><a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'spartansarcadecab.tumblr.com');"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a></div>
+                    <div class="grid-3 omega">
+						
+						<style>
+						#st-search-input {
+							
+						}
+						div.st-result {
+							cursor: pointer;
+						}
+						div.st-result:active {
+							background-color: #934C00;
+							background-clip: content-box;
+						}
+						div.st-result:active .st-snippet {
+							color: white;
+						}
+						div.st-result:active h3 a {
+							color: white;
+						}
+						.st-pagination a:active {
+							color: white;
+						}
+						span.st-snippet>em {
+							font-weight: bold;
+							font-style: normal;
+						}
+						form input.st-search-input {
+						font-size: 24px;
+						font-family: 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,'apple symbols',sans-serif;
+						padding: 5px 9px 5px 36px;
+						height: 26px;
+						width: 166px;
+						border: 3px solid #CCC;
+						-webkit-box-shadow: none;
+						-moz-box-shadow: none;
+						box-shadow: 0 0 50px rgba(87, 158, 212, 0);
+						background-position: 6px 6px;
+						background-image: url(<?php print $base_path; ?>sites/all/themes/trainhole/images/search%203x.png);
+						border-radius: 0px;
+						background-repeat: no-repeat;
+						outline: default;
+						}
+						form input.st-search-input:focus {
+							border-color: rgb(87, 158, 212);
+						}
+						</style>
+						
+						<form>
+						  <input type="text" id="st-search-input" class="st-search-input" />
+						</form>
+						<div id="st-results-container"></div>
+						<script type="text/javascript">
+						  var Swiftype = window.Swiftype || {};
+						  (function() {
+						    Swiftype.key = 'DR7XPTyp7PmwqirDndqd';
+						    Swiftype.inputElement = '#st-search-input';
+						    Swiftype.resultContainingElement = '#st-results-container';
+						    Swiftype.attachElement = '#st-search-input';
+						    Swiftype.renderStyle = "overlay";
+
+						    var script = document.createElement('script');
+						    script.type = 'text/javascript';
+						    script.async = true;
+						    script.src = "//swiftype.com/embed.js";
+						    var entry = document.getElementsByTagName('script')[0];
+						    entry.parentNode.insertBefore(script, entry);
+						  }());
+						</script>
+						<!--
+						<a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'spartansarcadecab.tumblr.com');"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a>
+					-->
+					</div>
                 </div>
             <?php endif;?>
             
@@ -259,13 +330,17 @@ if (isset($node)) {
                 <h3>Recent Events</h3>
                 <?php print views_embed_view('front_page_past_events', 'default'); ?>
                 <a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">More Events</a>
+				
+				<h3>Misc. Link</h3>
+				
+				<a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'spartansarcadecab.tumblr.com');"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a>
             </div>
             <!--
 			
                 <div class="grid-4">
                     <h3>Recent Games</h3>
                     <div style="margin: 0 -10px;">
-                        <?php print views_embed_view('front_page_games', 'default'); ?>
+					<?php /*print views_embed_view('front_page_games', 'default');*/ ?>
                     </div>
                     <a href="games" style="font-size: 32px; font-weight: bold; text-transform: uppercase; text-align: center; padding: 15px; border: 5px solid #333; text-decoration: none; display: block; clear: both; line-height: 1em;" class="darkLink">More Games</a>
                 </div>
