@@ -1,11 +1,8 @@
 <?php
 // $Id: page.tpl.php
-?><!DOCTYPE html />
-<html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=1136" />
+?>
 
+	
     <style>
 	
         /* This is a whale. It's here because I like whales. */
@@ -39,89 +36,10 @@
         }
 
     </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--this is so that the username stays in place-->
-    <!--modified from http://www.finefrog.com/2007/02/26/faking-css-position-fixed-in-internet-explorer-6/ -->
-    <script type="text/javascript">  
-	mouseIsOver = false;
-        window.onscroll = ( 
-        function() {
-            if (mouseIsOver) {
-                element.style.top = (offset + (document.getElementById('toolbar')?document.getElementById('toolbar').offsetHeight:0) - ((window.pageYOffset>=0) ? window.pageYOffset : 0)) + 'px';
-            }
-        }
-        )
-		
-    </script>  
 	
-    <!--Google Analytics-->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-26895720-1']);
-        _gaq.push(['_setDomainName', 'sjsugamedev.com']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-
-    </script>
-    <!--GA outbound link tracking (FB, Steam, Google Group)-->
-    <script type="text/javascript">
-        function recordOutboundLink(link, category, action) {
-            _gat._getTrackerByName()._trackEvent(category, action);
-        }
-    </script>
-
-</head>
-<body>
+	
+	
+	
     <div class="container-12" style="padding-left: 10px; padding-right: 10px;">
         <div class="grid-12" id="this-is-just-to-provide-space-above-the-header" style="margin: 20px 0;"></div>
         <!--header-->
@@ -384,6 +302,3 @@ if (isset($node)) {
 			
         <?php endif;?>
     </div>
-	
-</body>
-</html>
