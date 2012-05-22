@@ -10,7 +10,7 @@
 
         /* LOGO */
 
-        .smalllogo a{
+        a.smalllogo{
             background: url('<?php print $base_path; ?>sites/all/themes/trainhole/images/logotype 3x short threelogos threecolors.png'); /* "3x" is the scale factor */
             background-position: left bottom;
             background-repeat: no-repeat;
@@ -27,11 +27,12 @@
             width: 354px; 
             /* 27 times the scale factor */
             height: 81px; 
+			text-indent: -9999px;
         }
-        .smalllogo a:hover {
+        a.smalllogo:hover {
             background-position: left bottom;
         }
-        .smalllogo a:active {
+        a.smalllogo:active {
             background-position: left top;
         }
 
@@ -46,12 +47,9 @@
 
         <header class="grid-12" style="margin-bottom: 40px;">
             <div class="grid-4 alpha">
-                <div class="smalllogo" style="">
-                    <a style="text-indent: -9999px;" href="<?php print $front_page; ?>">
-                        Game Development Club at San José State University
-                    </a>
-                </div>
-
+                <a class="smalllogo" href="<?php print $front_page; ?>">
+                    <h1>Game Development Club at San José State University</h1>
+                </a>
             </div>
             <div class="grid-8 omega">
                 <div class="grid-2 alpha">

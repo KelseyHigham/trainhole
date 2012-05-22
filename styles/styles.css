@@ -24,6 +24,35 @@ padding: 0;
 
 /* START OF THE REAL STUFF */
 
+/* LOGO */
+
+a.smalllogo{
+    background: url('<?php print $base_path; ?>sites/all/themes/trainhole/images/logotype 3x short threelogos threecolors.png'); /* "3x" is the scale factor */
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    display:block;
+    /* -31 times the scale factor, for the sticking-out-to-the-left
+        part */
+    margin-left: -93px;
+    /* -5 times the scale factor, for the part that protrudes
+        above the text of the logo */ 
+    margin-top: -15px; 
+    margin-bottom: -15px;
+    outline: none;
+    /* 118 times the scale factor */
+    width: 354px; 
+    /* 27 times the scale factor */
+    height: 81px; 
+	text-indent: -9999px;
+}
+a.smalllogo:hover {
+    background-position: left bottom;
+}
+a.smalllogo:active {
+    background-position: left top;
+}
+
+
 hr {
 border-top-width: 3px; 
 border-top-color: #333;
