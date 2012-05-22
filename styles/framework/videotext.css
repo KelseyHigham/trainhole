@@ -55,10 +55,10 @@ blockquote {
     border-style: solid;
 	margin-bottom: 20px;
 	margin-top: 60px;
-	background-color: #E6E6E6;
+	background-color: #EEE;
 }
 blockquote *{
-    background-color: #E6E6E6;
+    background-color: #EEE;
 }
 code {
     display: inline-block;
