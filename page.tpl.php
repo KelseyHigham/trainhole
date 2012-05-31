@@ -186,9 +186,6 @@
 							entry.parentNode.insertBefore(script, entry);
 						}());
 					</script>
-					<!--
-						<a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'spartansarcadecab.tumblr.com');"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a>
-					-->
 				</div>
 			</div>
 		<?php endif;?>
@@ -234,6 +231,11 @@
 			</div>
 			
 			<div class="grid-3">
+				
+				<h3>From This Month</h3>
+				
+				<?= views_embed_view('octobers_past', 'default'); ?>
+				
 				<h3>Upcoming Events</h3>
 				<?php global $user; if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
 					<a href="<?php print url(); ?>node/add/event" class="event small" style="border-style: dotted;">
@@ -246,40 +248,6 @@
 				<h3>Recent Events</h3>
 				<?php print views_embed_view('front_page_past_events', 'default'); ?>
 				<a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">More Events</a>
-				
-				<h3>From This Month</h3>
-				
-				<style>
-					ul.apps {
-						margin: 0 -10px;
-					}
-					ul.apps:after {
-						content: " ";
-						width: 0;
-						height: 0;
-						display: block;
-						clear: left;
-						margin: 0;
-					}
-					ul.apps li {
-						float: left;
-						margin: 0 10px 20px;
-						display: block;
-					}
-					ul.apps a {
-						width: 60px;
-						height: 60px;
-						display: block;
-						outline: 0px solid #934C00;
-						-webkit-transition: .1s;
-					}
-					ul.apps a:active {
-						outline: 10px solid #934C00;
-						-webkit-transition: 0s;
-					}
-				</style>
-				
-				<?= views_embed_view('octobers_past', 'default'); ?>
 				
 				<h3>Misc.</h3>
 				

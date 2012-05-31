@@ -774,3 +774,32 @@ background-color: rgba(0, 191, 255, .5);
 .post {
 margin-bottom: 50px;
 }
+
+/* THIS MONTH'S FEATURED GAMES */
+ul.apps {
+	margin: 0 -10px;
+}
+ul.apps:after {
+	content: " ";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: left;
+	margin: 0;
+}
+ul.apps li {
+	float: left;
+	margin: 0 10px 20px;
+	display: block;
+}
+ul.apps a {
+	width: 60px;
+	height: 60px;
+	display: block;
+	outline: 0px solid #934C00;
+	-webkit-transition: .1s;
+}
+ul.apps a:active {
+	outline: 10px solid #934C00;
+	-webkit-transition: 0s;
+}
