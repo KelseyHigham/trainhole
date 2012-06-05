@@ -232,8 +232,6 @@
 			
 			<div class="grid-3">
 				
-				<h3>From This Month</h3>
-				
 				<?= views_embed_view('octobers_past', 'default'); ?>
 				
 				<h3>Upcoming Events</h3>
