@@ -653,7 +653,7 @@ margin-top: 4px;
 		
 /* KEYBOARD STYLING */
 		
-kbd {
+kbd, span.kbd {
 line-height: 1em;
 background-color: beige;
 -webkit-font-smoothing: antialiased;/**/
@@ -706,36 +706,36 @@ border-color: rgba(0, 0, 0, .05) rgba(0, 0, 0, .085) rgba(0, 0, 0, .3);
 white-space: pre;
 display: inline-block;
 }
-kbd:active {
+kbd:active, span.kbd:active {
 position: relative;
 top: 0.125em;/**/
 border-bottom-width: 0.0625em;
 margin-bottom: .25em;
 box-shadow: 0 0.0625em 0.0625em hsla(0,0%,0%,.5);
 }
-kbd::selection {
+kbd::selection, span.kbd::selection {
 background-color: rgba(0,0,0,0);
 }
-kbd::-moz-selection {
+kbd::-moz-selection, span.kbd::-moz-selection {
 background-color: rgba(0,0,0,0);
 }
-kbd:empty::before {
+kbd:empty::before, span.kbd:empty::before {
 content: "empty <kbd></kbd> tags";
 }
-kbd.invisible {
+kbd.invisible, span.kbd.invisible {
 opacity: 0;
 cursor: auto;/**/
 -webkit-transition: 1s;
 -moz-transition: 1s;
 background-clip: border-box;
 }
-kbd.invisible:active {
+kbd.invisible:active, span.kbd.invisible:active {
 top: 0;
 border-bottom-width: 0.1875em;
 margin-bottom: 0.125em;
 opacity: .5;
 }
-kbd.box {
+kbd.box, span.kbd.box {
 line-height: 1em; 
 background-color: transparent;
 color: beige;
@@ -748,13 +748,13 @@ background-image: none;
 border-width: 0;
 white-space: normal;
 }
-kbd.box:active {
+kbd.box:active, span.kbd.box:active {
 position: static;
 }
-kbd kbd {
+kbd kbd, span.kbd span.kbd {
 display: none;
 }
-kbd.box>kbd {
+kbd.box>kbd, span.kbd.box>span.kbd {
 display: inline-block;
 }
         
