@@ -91,31 +91,23 @@
 <?php endif;?>
 
 <div class="antiwrapper">
-    <div class="grid-12">
-        <?php global $user; if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
-            <a href="<?php print url(); ?>node/add/game-folder" style="border-width: 10px; border-style: dotted; margin-bottom: 20px; display: block; padding: 14px; line-height: 1em; font-size: 32px; font-weight: bold;">
-                Add a Game Folder
-            </a>
-        <?php endif; ?>
-        <?php print views_embed_view('list_of_game_folders', 'default'); ?>
-        <div  style="border: 10px solid #333; margin-bottom: 20px; display: block; line-height: 1em; font-size: 32px; background-color: #333;">
-            <a style="padding: 14px; display: block; font-weight: normal; text-decoration: none;" href="/archive/games" class="darkLink">Even More Miscellaneous</a>
-            <a href="/archive/games" class="lightLink" style="display: block; padding: 10px; display: block; text-decoration: none; margin: 10px 65px 65px; float: left;">
-                <p style="background-color: white; color: #333; font-family: georgia, serif; font-style: italic; padding: 44px; margin: 0;">
-                    ~ games entered in Glorious Trainwrecks ~
-                </p>
-				</a>
-
-	            <a href="/archive/games" class="lightLink" style="display: block; padding: 10px; display: block; text-decoration: none; margin: -45px 65px 65px; float: left;">
-				
-                <p style="background-color: white; color: #333; font-family: georgia, serif; font-style: italic; padding: 44px; margin: 0;">
-                    ~ 37 older games and videos ~
-                </p>
-				
-            </a>
-            <span style="clear:both;display:block;height:0;">&nbsp;</span>
-        </div>
-    </div>
+	<div class="grid-12">
+		<?php global $user; if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
+			<a href="<?php print url(); ?>node/add/game-folder" style="border-width: 10px; border-style: dotted; margin-bottom: 20px; display: block; padding: 14px; line-height: 1em; font-size: 32px; font-weight: bold;">
+				Add a Game Folder
+			</a>
+		<?php endif; ?>
+		<?php print views_embed_view('list_of_game_folders', 'default'); ?>
+		<div  style="border: 10px solid #333; margin-bottom: 20px; display: block; line-height: 1em; font-size: 32px; background-color: #333;">
+			<a style="padding: 14px; display: block; font-weight: normal; text-decoration: none;" href="/archive/games" class="darkLink">Even More Miscellaneous</a>
+			<a href="/archive/games" class="lightLink" style="display: block; padding: 10px; display: block; text-decoration: none; margin: 10px 65px 65px; float: left;">
+				<p style="background-color: white; color: #333; font-family: georgia, serif; font-style: italic; padding: 44px; margin: 0;">
+					~ games entered in Glorious Trainwrecks ~
+				</p>
+			</a>
+			<span style="clear:both;display:block;height:0;">&nbsp;</span>
+		</div>
+	</div>
 </div>
 
 
