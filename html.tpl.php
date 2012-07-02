@@ -55,9 +55,11 @@
   
   
   <meta name="viewport" content="width=1136" />
+  <?php if (drupal_is_front_page()): ?>
   <meta name='description' content="A student organization of game makers and fans, at San José State University. Play games we made, or watch videos of guest speakers!" />
   <link rel='image_src' href='sites/all/themes/trainhole/images/thumbnail.gif' />
   <meta itemprop='image' content='sites/all/themes/trainhole/images/thumbnail.gif' />
+  <?php endif;?>
 
   <!--this is so that the username stays in place-->
   <!--modified from http://www.finefrog.com/2007/02/26/faking-css-position-fixed-in-internet-explorer-6/ -->

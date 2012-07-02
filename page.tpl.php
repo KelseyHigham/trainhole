@@ -216,7 +216,10 @@
 			</div>
 		<?php endif; ?>
 		<?php if (!$is_front): ?>
-			<div class="grid-8 prefix-2 suffix-2"><?php print render($page['content']); ?></div>
+			<div class="grid-8 prefix-2 suffix-2">
+                <img typeof="foaf:Image" src='/sites/all/themes/trainhole/images/thumbnail.gif' style="display: none;"/>
+                <?php print render($page['content']); ?>
+            </div>
 		<?php else: ?>    
 			
 			<div class="grid-9">
