@@ -119,19 +119,46 @@ print '<pre>';
                         $scroll_buttons = '    <div class="grid-4 alpha omega buttonset" style="float:right; margin-bottom: -20px; margin-top: -10px;">
                             <div class="grid-2 alpha">
                                 <button 
+                                id="leftbutton"
                                 class="button" 
-                                style="border-bottom-left-radius: 20px;"
+                                style="border-bottom-left-radius: 20px; opacity: .5;"
                                 onmousedown="document.getElementById(\'scrollable\').scrollLeft -= 1 + ((document.getElementById(\'scrollable\').scrollLeft - 1) % 700);"
                                 >◀</button>
                             </div>
                             <div class="grid-2 omega">
                                 <button 
+                                id="rightbutton"
                                 class="button"
                                 style="border-bottom-right-radius: 20px;" 
                                 onmousedown="document.getElementById(\'scrollable\').scrollLeft += 701 - ((document.getElementById(\'scrollable\').scrollLeft + 701) % 700);"
                                 >▶</button>
                             </div>
-                        </div>';
+                        </div>
+                        
+
+                        <script>
+                                
+                        shots = document.getElementById("scrollable");
+                        left = document.getElementById("leftbutton");
+                        right = document.getElementById("rightbutton");
+                        
+                        shots.onscroll = ( 
+                            function() {
+                                
+                                if (shots.scrollLeft <= 350) 
+                                    left.style.opacity = .5;
+                                else 
+                                    left.style.opacity = 1;
+                                
+                                if (shots.scrollLeft > shots.scrollWidth-700-350)
+                                    right.style.opacity = .5;
+                                else 
+                                    right.style.opacity = 1;
+                              
+                            }
+                        )
+                    
+                        </script>';
                     }  
                     ?>
         
