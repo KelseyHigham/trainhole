@@ -118,10 +118,18 @@ print '<pre>';
                     if ($scroll_width > 700) {
                         $scroll_buttons = '    <div class="grid-4 alpha omega buttonset" style="float:right; margin-bottom: -20px; margin-top: -10px;">
                             <div class="grid-2 alpha">
-                                <button class="button " style="border-bottom-left-radius: 20px;" onmousedown="document.getElementById(\'scrollable\').scrollLeft -= 1 + ((document.getElementById(\'scrollable\').scrollLeft - 1) % 700);">◀</button>
+                                <button 
+                                class="button" 
+                                style="border-bottom-left-radius: 20px;"
+                                onmousedown="document.getElementById(\'scrollable\').scrollLeft -= 1 + ((document.getElementById(\'scrollable\').scrollLeft - 1) % 700);"
+                                >◀</button>
                             </div>
                             <div class="grid-2 omega">
-                                <button class="button " style="border-bottom-right-radius: 20px;" onmousedown="document.getElementById(\'scrollable\').scrollLeft += 701 - ((document.getElementById(\'scrollable\').scrollLeft + 701) % 700);">▶</button>
+                                <button 
+                                class="button"
+                                style="border-bottom-right-radius: 20px;" 
+                                onmousedown="document.getElementById(\'scrollable\').scrollLeft += 701 - ((document.getElementById(\'scrollable\').scrollLeft + 701) % 700);"
+                                >▶</button>
                             </div>
                         </div>';
                     }  
