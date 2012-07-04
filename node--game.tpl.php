@@ -91,7 +91,7 @@ print '<pre>';
     print '</pre>'; */
     ?>
 
-    <?php if($page || (isset($in_preview) && $in_preview)):?>
+    <?php if($page || (isset($in_preview) && $in_preview)): ?>
    
         <div class="antiwrapper">
 
@@ -100,9 +100,7 @@ print '<pre>';
 
 
                 <!--Screenshots-->
-                <?php
-                $scroll_buttons = "";
-                if ($field_game_screenshot or $field_game_video): ?>
+                <?php $scroll_buttons = ""; if ($field_game_screenshot or $field_game_video): ?>
         
                 <div id="scrollable" class="grid-9 alpha omega" style="width: 700px; overflow-x: auto; margin-bottom: 20px; background: #333;">
                     <?php $scroll_width = (700*sizeof($field_game_screenshot) + 700*sizeof($field_game_video)); ?>
@@ -335,8 +333,7 @@ print '<pre>';
         </div>&nbsp;
 
     </div>
-    <?php //Front page display!
-    else: ?>
+<?php else: //Front page display! ?>
 
     <?php 
     //Is the game a legacy game, or a non-Club game? (Abdo Fere is a test folder on my local machine, lol.)
@@ -371,9 +368,7 @@ print '<pre>';
         </div>
     </a>
 		
-    <?php 
-    //If not, do a full-size game box.
-    else: ?>
+<?php else: //If not, do a full-size game box. ?>
 	
     <a href="<?= $node_url ?>" class="horizontalgamebox darkLink">
         <div class="horizontalgameboxscreenshot"><?php print render($content['field_game_screenshot']); ?></div>
