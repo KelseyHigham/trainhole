@@ -82,7 +82,7 @@
 
 <?php if ($page): ?>
 <style>
-p {
+p,img,iframe {
     margin-bottom: 1.5em;
 }
 </style>

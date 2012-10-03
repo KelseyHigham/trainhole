@@ -46,7 +46,7 @@ li{
     margin-left:30px;
 	margin-bottom: .5em;
 }
-p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset{
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,iframe{
     margin-bottom:20px
 }
 blockquote {
