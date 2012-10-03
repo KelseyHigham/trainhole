@@ -802,3 +802,15 @@ ul.apps a:active {
 	outline: 10px solid #934C00;
 	-webkit-transition: 0s;
 }
+ul.apps div.app-fallback {
+    height: 60px; 
+    width: 60px; 
+    overflow: hidden; 
+    display: inline-block;
+    background-color: #934C00;
+    color: white;
+}
+ul.apps div.apps-fallback:active {
+    background-color: white;
+    color: #934C00
+}
