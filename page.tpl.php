@@ -318,7 +318,7 @@
 				
 				<h3>Misc.</h3>
 				
-				<a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'spartansarcadecab.tumblr.com');"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a>
+				<a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a>
 				
 				
 			</div>
