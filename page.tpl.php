@@ -181,9 +181,9 @@
             
 		<?php if ($is_front): ?>
 			<div class="grid-12" style="margin: 0 10px 20px;">
-				<div class="grid-3 alpha"><a href="https://www.facebook.com/groups/sjsugamedev/" class="frontpagecolored facebookurl button" style="letter-spacing: -1px; white-space: nowrap;" onClick="recordOutboundLink(this, 'Outbound Links', 'facebook.com');"><img src="sites/all/themes/trainhole/images/facebook 3x white.png" class="icon"> Facebook Group</a></div>
-				<div class="grid-3"><a href="http://steamcommunity.com/groups/SJSUGameDev" class="frontpagecolored steamurl button" onClick="recordOutboundLink(this, 'Outbound Links', 'steamcommunity.com');"><img src="sites/all/themes/trainhole/images/steam 3x white.png" class="icon"> Steam Group</a></div>
-				<div class="grid-3"><a href="http://groups.google.com/group/sjsu-video-game-development-club" class="frontpagecolored googlegroupsurl button" onClick="recordOutboundLink(this, 'Outbound Links', 'groups.google.com');"><img src="sites/all/themes/trainhole/images/mail 3x white.png" class="icon"> Google Group</a></div>
+				<div class="grid-3 alpha"><a href="https://www.facebook.com/groups/sjsugamedev/" class="frontpagecolored facebookurl button" style="letter-spacing: -1px; white-space: nowrap;" ><img src="sites/all/themes/trainhole/images/facebook 3x white.png" class="icon"> Facebook Group</a></div>
+				<div class="grid-3"><a href="http://steamcommunity.com/groups/SJSUGameDev" class="frontpagecolored steamurl button"><img src="sites/all/themes/trainhole/images/steam 3x white.png" class="icon"> Steam Group</a></div>
+				<div class="grid-3"><a href="http://groups.google.com/group/sjsu-video-game-development-club" class="frontpagecolored googlegroupsurl button"><img src="sites/all/themes/trainhole/images/mail 3x white.png" class="icon"> Google Group</a></div>
 				<div class="grid-3 omega">
 						
 					<style>
@@ -232,7 +232,7 @@
 					</style>
 						
 					<form>
-						<input type="text" id="st-search-input" class="st-search-input" />
+						<input type="text" id="st-search-input" class="st-search-input" placeholder="Search"/>
 					</form>
 					<div id="st-results-container"></div>
 					<script type="text/javascript">
@@ -283,7 +283,7 @@
 		<?php endif; ?>
 		<?php if (!$is_front): ?>
 			<div class="grid-8 prefix-2 suffix-2">
-                <img typeof="foaf:Image" src='/sites/all/themes/trainhole/images/thumbnail.gif' style="display: none;"/>
+                <img src='/sites/all/themes/trainhole/images/thumbnail.gif' style="display: none;"/>
                 <?php print render($page['content']); ?>
             </div>
 		<?php else: ?>    
@@ -315,10 +315,6 @@
 				<h3>Recent Events</h3>
 				<?php print views_embed_view('front_page_past_events', 'default'); ?>
 				<a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">More Events</a>
-				
-				<h3>Misc.</h3>
-				
-				<a href="http://spartansarcadecab.tumblr.com" class="frontpagecolored arcadeurl button" style="letter-spacing: -1px; white-space: nowrap;"><img src="sites/all/themes/trainhole/images/arcade 3x white.png" class="icon"> Arcade Progress</a>
 				
 				
 			</div>
