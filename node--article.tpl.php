@@ -87,6 +87,12 @@ p,img,iframe {
 }
 </style>
 <?php endif; ?>
+<style>
+iframe[src^="http://www.youtube.com/embed"] {
+    width: 460px;
+    height: 260px;
+}
+</style>
 
 <div class='<?php if($page) {print("antiwrapper");} else {print("post grid-9 alpha omega");} ?>' >
 
