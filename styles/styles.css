@@ -725,8 +725,6 @@ content: "empty <kbd></kbd> tags";
 kbd.invisible, span.kbd.invisible {
 opacity: 0;
 cursor: auto;/**/
--webkit-transition: 1s;
--moz-transition: 1s;
 background-clip: border-box;
 }
 kbd.invisible:active, span.kbd.invisible:active {
