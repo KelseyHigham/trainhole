@@ -94,6 +94,19 @@ print '<pre>';
     <?php if($page || (isset($in_preview) && $in_preview)): ?>
    
         <div class="antiwrapper">
+			<style>
+			<?php /* This'll improve rendering on Lion and Mountain Lion, where the dark, disappearing, overlay scrollbar isn't really visible in the screenshot scroll thingy. (For some reason, it doesn't automatically switch to a white scrollbar, when the background is dark, on inline scroll elements.) */ ?>
+			::-webkit-scrollbar {
+			    width: 10px;
+			    height: 10px;
+			}
+			::-webkit-scrollbar-thumb {
+			    background-color: #333;
+			}
+			::-webkit-scrollbar-track {
+			    background-color: white;
+			}
+			</style>
 
             <!--Left column-->
             <div class="grid-9">
@@ -116,7 +129,7 @@ print '<pre>';
         
                     <?php  
                     if ($scroll_width > 700) {
-                        $scroll_buttons = '    <div class="grid-4 alpha omega buttonset" style="float:right; margin-bottom: -20px; margin-top: -10px;">
+                        $scroll_buttons = '    <div class="grid-4 alpha omega buttonset" style="float:right; margin-bottom: -20px; margin-top: -20px;">
                             <div class="grid-2 alpha">
                                 <button 
                                 id="leftbutton"
