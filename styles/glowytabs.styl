@@ -1,0 +1,162 @@
+// This dingus makes use of HUSL, so that should be provided to Stylus at compile time:
+// stylus < input.styl > output.css -u /path/to/husl.js
+// This dingus is intended to be tested with page--the-future.tpl.php. Remove stuff that isn't necessary for that.
+
+size = 32px //font size
+// @import '/Users/kelsey/Dropbox/Public/GitHub/grid_stylus/960/grid'
+magic = #f9c200 //yellow
+lightmagic = #f4d900 //lightyellow
+darkmagic = #f9ae00 //darkyellow
+hpad = 10px //horizontal padding in the nav>as
+vpad = 3px //vertical padding therein
+voff = 1px //vertical offset for the text
+expand = 2px //how much wider the selected nav>a should be
+
+@font-face {
+    font-family: 'munroregular';
+    src: url('http://sjsugamedev.com/sites/all/themes/trainhole/fonts/munro/munro-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// defaults for the preview version; not necessary in the full version
+// .container_12
+//     font-size 16px
+//     line-height 1
+//     color #333
+
+
+// the logo background of that one div
+.beegee 
+    position relative
+    //- background-image url(http://cl.ly/image/0X3y1D1T0Q29/content) //three colors
+    //- background-image url(http://cl.ly/image/0P1h3U0p171i/content) //one color, normal brightness
+    // background-image url(http://cl.ly/image/1X070n293f1H/content)
+    background-image url(http://sjsugamedev.com/sites/all/themes/trainhole/images/logotype%202x%20short%20threelogos%20threecolors.png)
+    background-position top
+    scalefactor = 2 //size of pixels in logo
+    width 118px * scalefactor
+    height 27px * scalefactor
+    top -5px * scalefactor
+    left -3px * scalefactor
+    cursor pointer
+    -webkit-transition .25s background-image
+    display: block;
+    color: transparent;
+    background-color: transparent;
+.beegee:hover
+    // background-image url(http://cl.ly/image/0X3y1D1T0Q29/content)
+    background-position center
+.beegee:active
+    background-position bottom
+    color: transparent;
+    background-color: transparent;
+    //- -webkit-transition none
+
+// text within tabs; I think this can be merged into the previous block
+nav>a>span
+    -webkit-font-smoothing none
+
+// selected
+nav>a.chosen
+    z-index 2
+nav>a:active
+    z-index 3
+nav>a:active, nav>a.chosen
+    margin -1*expand -1*expand -1*expand -1*expand+2
+    color #333
+    border-width expand
+
+// icons
+nav>a>div
+    width 18px
+    height 18px
+    display inline-block
+    background-position 0px 18px
+    bottom -2px
+    position relative
+nav>a.dark:hover>div, nav>a.dark:active>div
+    background-position 0px 0px
+
+.about-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/about%202x.png")
+.join-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/join%202x.png")
+.games-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/games%202x.png")
+.events-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/events%202x.png")
+.profile-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/profile%202x.png")
+.login-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/login%202x.png")
+.search-icon
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%202x.png")
+
+// hues whose lightness is low at full saturation should have white text at such times
+nav>a.dark:active, 
+nav>a.dark.chosen,
+nav>a.dark:hover
+    color white
+
+// pretty self-explanatory
+nav>a.leftmost
+    border-left-width none
+nav>a.leftmost:active, nav>a.leftmost.chosen
+    border-left-width 2px
+
+// color functions!
+uncolored(hu)
+    background-color huslp(hu,100,68)
+deselected()
+    box-shadow none
+    border-color #333
+colored(hu)
+    background-color hsl(hu,100,50)
+selected(hu)
+    thickness = 2px
+    box-shadow 0 0 5px hsl(hu,100,50), 0 5px 10px hsla(0,0,0,.5), - thickness 0 0 #333, thickness 0 0 #333
+    border-color hsl(hu,100,50)
+
+for index in 1 .. 6
+    hu = 60 * index + 45 - 180
+    
+    //deselected
+    nav>a:nth-of-type({index}), 
+    nav:active>a:nth-of-type({index}).chosen
+        uncolored(hu)
+        
+    //hovered or selected
+    nav>a:nth-of-type({index}):hover,
+    nav>a:nth-of-type({index}):active, 
+    nav>a:nth-of-type({index}).chosen
+        colored(hu)
+        
+    //completely selected
+    nav>a:nth-of-type({index}):active, 
+    nav>a:nth-of-type({index}).chosen
+        selected(hu)
+
+// normal tab, or newly deselected tab
+nav>a, 
+nav:active>a.chosen
+    font-family munroregular
+    tpad = vpad + voff
+    bpad = vpad - voff
+    padding tpad hpad bpad hpad
+    display inline-block
+    text-transform uppercase
+    font-size size
+    text-decoration none
+    color #333
+    border-style solid
+    border-left 2px #333 solid
+    border-left-color #333
+    border-width 0 0 0 2px
+    border-radius 0
+    position relative
+    margin 0
+    box-shadow none
+    border-color #333
+    line-height 1
+    z-index 1
