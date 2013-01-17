@@ -1,0 +1,36 @@
+{
+  "name": "nib",
+  "description": "Stylus mixins and utilities",
+  "version": "0.8.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/visionmedia/nib.git"
+  },
+  "devDependencies": {
+    "connect": "1.x",
+    "jade": "0.22.0",
+    "stylus": "0.28.x",
+    "mocha": "*",
+    "should": "*",
+    "canvas": "*"
+  },
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+  },
+  "main": "lib/nib.js",
+  "engines": {
+    "node": "*"
+  },
+  "_id": "nib@0.8.2",
+  "dependencies": {},
+  "optionalDependencies": {},
+  "_engineSupported": true,
+  "_npmVersion": "1.1.24",
+  "_nodeVersion": "v0.6.19",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "f8395952c0eb8ad8eadc32cc393ad83344b7fb3e"
+  },
+  "_from": "nib"
+}

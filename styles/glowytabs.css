@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'munroregular';
-  src: url("http://sjsugamedev.com/sites/all/themes/trainhole/fonts/munro/munro-webfont.ttf") format('truetype');
+  src: url("../fonts/munro/munro-webfont.ttf") format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,45 +13,14 @@
   top: -10px;
   left: -6px;
   cursor: pointer;
-  -webkit-transition: 0.25s background-image;
   display: block;
   color: transparent;
   background-color: transparent;
-}
-.beegee:hover {
-  background-position: center;
 }
 .beegee:active {
   background-position: bottom;
   color: transparent;
   background-color: transparent;
-}
-nav>a>span {
-  -webkit-font-smoothing: none;
-}
-nav>a.chosen {
-  z-index: 2;
-}
-nav>a:active {
-  z-index: 3;
-}
-nav>a:active,
-nav>a.chosen {
-  margin: -2px -2px -2px 0px;
-  color: #333;
-  border-width: 2px;
-}
-nav>a>div {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  background-position: 0px 18px;
-  bottom: -2px;
-  position: relative;
-}
-nav>a.dark:hover>div,
-nav>a.dark:active>div {
-  background-position: 0px 0px;
 }
 .about-icon {
   background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/about%202x.png");
@@ -74,121 +43,209 @@ nav>a.dark:active>div {
 .search-icon {
   background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%202x.png");
 }
-nav>a.dark:active,
-nav>a.dark.chosen,
-nav>a.dark:hover {
-  color: #fff;
+#gnav .swatch {
+  -webkit-font-smoothing: none;
 }
-nav>a.leftmost {
+#gnav .swatch.chosen {
+  z-index: 2;
+}
+#gnav .swatch:active {
+  z-index: 3;
+}
+#gnav input.swatch:focus {
+  z-index: 4;
+}
+#gnav .swatch:active,
+#gnav .swatch.chosen,
+#gnav .swatch:focus {
+  margin: -2px -2px -2px 0px;
+  color: #333;
+  border-width: 2px;
+}
+#gnav .swatch,
+#gnav:active .swatch.chosen {
+  -webkit-transition: 0.25s background-color, 0.25s width;
+  -moz-transition: 0.25s background-color, 0.25s width;
+  -o-transition: 0.25s background-color, 0.25s width;
+  -ms-transition: 0.25s background-color, 0.25s width;
+  transition: 0.25s background-color, 0.25s width;
+}
+#gnav .swatch:active,
+#gnav .swatch.chosen,
+#gnav .swatch:focus,
+#gnav .swatch:hover {
+  -webkit-transition: 0s background-color, 0.25s width;
+  -moz-transition: 0s background-color, 0.25s width;
+  -o-transition: 0s background-color, 0.25s width;
+  -ms-transition: 0s background-color, 0.25s width;
+  transition: 0s background-color, 0.25s width;
+}
+#gnav .swatch.dark:active,
+#gnav .swatch.dark.chosen,
+#gnav .swatch.dark:hover {
+  color: #eee;
+}
+#gnav .swatch.dark:active .gnav-icon,
+#gnav .swatch.dark.chosen .gnav-icon,
+#gnav .swatch.dark:hover .gnav-icon {
+  background-position: 0px 0px;
+}
+#gnav>input.swatch#st-search-input:focus,
+#gnav>input.swatch#st-search-input:hover {
+  background-position: 0px 0px;
+  color: #eee;
+}
+#gnav .swatch.leftmost {
   border-left-width: none;
 }
-nav>a.leftmost:active,
-nav>a.leftmost.chosen {
+#gnav .swatch.leftmost:active,
+#gnav .swatch.leftmost.chosen {
   border-left-width: 2px;
 }
-nav>a:nth-of-type(1),
-nav:active>a:nth-of-type(1).chosen {
+#gnav .swatch:nth-child(1),
+#gnav:active .swatch:nth-child(1).chosen {
   background-color: #ba97dd;
 }
-nav>a:nth-of-type(1):hover,
-nav>a:nth-of-type(1):active,
-nav>a:nth-of-type(1).chosen {
+#gnav .swatch:nth-child(1):hover,
+#gnav .swatch:nth-child(1):active,
+#gnav .swatch:nth-child(1).chosen {
   background-color: #bf00ff;
 }
-nav>a:nth-of-type(1):active,
-nav>a:nth-of-type(1).chosen {
+#gnav .swatch:nth-child(1):active,
+#gnav .swatch:nth-child(1).chosen {
+  -webkit-box-shadow: 0 0 5px #bf00ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   box-shadow: 0 0 5px #bf00ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   border-color: #bf00ff;
 }
-nav>a:nth-of-type(2),
-nav:active>a:nth-of-type(2).chosen {
+#gnav .swatch:nth-child(2),
+#gnav:active .swatch:nth-child(2).chosen {
   background-color: #e18cb0;
 }
-nav>a:nth-of-type(2):hover,
-nav>a:nth-of-type(2):active,
-nav>a:nth-of-type(2).chosen {
+#gnav .swatch:nth-child(2):hover,
+#gnav .swatch:nth-child(2):active,
+#gnav .swatch:nth-child(2).chosen {
   background-color: #ff0040;
 }
-nav>a:nth-of-type(2):active,
-nav>a:nth-of-type(2).chosen {
+#gnav .swatch:nth-child(2):active,
+#gnav .swatch:nth-child(2).chosen {
+  -webkit-box-shadow: 0 0 5px #ff0040, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   box-shadow: 0 0 5px #ff0040, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   border-color: #ff0040;
 }
-nav>a:nth-of-type(3),
-nav:active>a:nth-of-type(3).chosen {
+#gnav .swatch:nth-child(3),
+#gnav:active .swatch:nth-child(3).chosen {
   background-color: #cf9c6d;
 }
-nav>a:nth-of-type(3):hover,
-nav>a:nth-of-type(3):active,
-nav>a:nth-of-type(3).chosen {
+#gnav .swatch:nth-child(3):hover,
+#gnav .swatch:nth-child(3):active,
+#gnav .swatch:nth-child(3).chosen {
   background-color: #ffbf00;
 }
-nav>a:nth-of-type(3):active,
-nav>a:nth-of-type(3).chosen {
+#gnav .swatch:nth-child(3):active,
+#gnav .swatch:nth-child(3).chosen {
+  -webkit-box-shadow: 0 0 5px #ffbf00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   box-shadow: 0 0 5px #ffbf00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   border-color: #ffbf00;
 }
-nav>a:nth-of-type(4),
-nav:active>a:nth-of-type(4).chosen {
+#gnav .swatch:nth-child(4),
+#gnav:active .swatch:nth-child(4).chosen {
   background-color: #93b05f;
 }
-nav>a:nth-of-type(4):hover,
-nav>a:nth-of-type(4):active,
-nav>a:nth-of-type(4).chosen {
+#gnav .swatch:nth-child(4):hover,
+#gnav .swatch:nth-child(4):active,
+#gnav .swatch:nth-child(4).chosen {
   background-color: #40ff00;
 }
-nav>a:nth-of-type(4):active,
-nav>a:nth-of-type(4).chosen {
+#gnav .swatch:nth-child(4):active,
+#gnav .swatch:nth-child(4).chosen {
+  -webkit-box-shadow: 0 0 5px #40ff00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   box-shadow: 0 0 5px #40ff00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   border-color: #40ff00;
 }
-nav>a:nth-of-type(5),
-nav:active>a:nth-of-type(5).chosen {
+#gnav .swatch:nth-child(5),
+#gnav:active .swatch:nth-child(5).chosen {
   background-color: #2eba9c;
 }
-nav>a:nth-of-type(5):hover,
-nav>a:nth-of-type(5):active,
-nav>a:nth-of-type(5).chosen {
+#gnav .swatch:nth-child(5):hover,
+#gnav .swatch:nth-child(5):active,
+#gnav .swatch:nth-child(5).chosen {
   background-color: #00ffbf;
 }
-nav>a:nth-of-type(5):active,
-nav>a:nth-of-type(5).chosen {
+#gnav .swatch:nth-child(5):active,
+#gnav .swatch:nth-child(5).chosen {
+  -webkit-box-shadow: 0 0 5px #00ffbf, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   box-shadow: 0 0 5px #00ffbf, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   border-color: #00ffbf;
 }
-nav>a:nth-of-type(6),
-nav:active>a:nth-of-type(6).chosen {
+#gnav .swatch:nth-child(6),
+#gnav:active .swatch:nth-child(6).chosen {
   background-color: #54b1d3;
 }
-nav>a:nth-of-type(6):hover,
-nav>a:nth-of-type(6):active,
-nav>a:nth-of-type(6).chosen {
+#gnav .swatch:nth-child(6):hover,
+#gnav .swatch:nth-child(6):active,
+#gnav .swatch:nth-child(6).chosen {
   background-color: #0040ff;
 }
-nav>a:nth-of-type(6):active,
-nav>a:nth-of-type(6).chosen {
+#gnav .swatch:nth-child(6):active,
+#gnav .swatch:nth-child(6).chosen {
+  -webkit-box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
   border-color: #0040ff;
 }
-nav>a,
-nav:active>a.chosen {
+#gnav #st-search-input {
+  background-color: #54b1d3;
+}
+#gnav #st-search-input:hover,
+#gnav #st-search-input:focus {
+  background-color: #0040ff;
+}
+#gnav #st-search-input:focus {
+  -webkit-box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #0040ff;
+}
+#gnav .swatch,
+#gnav:active .swatch.chosen,
+#st-search-input {
   font-family: munroregular;
   padding: 4px 10px 2px 10px;
   display: inline-block;
   text-transform: uppercase;
   font-size: 32px;
+  height: 32px;
   text-decoration: none;
   color: #333;
   border-style: solid;
   border-left: 2px #333 solid;
   border-left-color: #333;
   border-width: 0 0 0 2px;
+  -webkit-border-radius: 0;
   border-radius: 0;
   position: relative;
   margin: 0;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border-color: #333;
   line-height: 1;
   z-index: 1;
+}
+x:-o-prefocus,
+#st-search-input {
+  top: -1px;
+}
+#gnav .swatch .gnav-icon,
+#gnav:active .swatch.chosen .gnav-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-position: 0px 18px;
+  bottom: -2px;
+  position: relative;
+}
+#gnav>input.swatch#st-search-input {
+  background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%20bigmargins%202x.png");
+  background-position: 0px -38px;
+  background-repeat: no-repeat;
+  padding-left: 32px;
 }
 

@@ -1,20 +1,22 @@
-// This dingus makes use of HUSL, so that should be provided to Stylus at compile time:
-// stylus < input.styl > output.css -u /path/to/husl.js
+// This dingus makes use of HUSL and nib, so those should be provided to Stylus at compile time:
+// stylus < input.styl > output.css -u /path/to/husl.js -u /path/to/nib/
 // This dingus is intended to be tested with page--the-future.tpl.php. Remove stuff that isn't necessary for that.
 
+@import 'nib'
 size = 32px //font size
-// @import '/Users/kelsey/Dropbox/Public/GitHub/grid_stylus/960/grid'
 magic = #f9c200 //yellow
 lightmagic = #f4d900 //lightyellow
 darkmagic = #f9ae00 //darkyellow
-hpad = 10px //horizontal padding in the nav>as
-vpad = 3px //vertical padding therein
+hpad = 10px //horizontal padding in the #gnav .swatches
+vpad = hpad - 7 //vertical padding therein
 voff = 1px //vertical offset for the text
-expand = 2px //how much wider the selected nav>a should be
+expand = 2px //how much wider the selected #gnav .swatch should be
 
 @font-face {
     font-family: 'munroregular';
-    src: url('http://sjsugamedev.com/sites/all/themes/trainhole/fonts/munro/munro-webfont.ttf') format('truetype');
+    // The following line doesn't work for the test site, because of cross-domain stuff.
+    // src: url('http://sjsugamedev.com/sites/all/themes/trainhole/fonts/munro/munro-webfont.ttf') format('truetype');
+    src: url('../fonts/munro/munro-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,43 +42,18 @@ expand = 2px //how much wider the selected nav>a should be
     top -5px * scalefactor
     left -3px * scalefactor
     cursor pointer
-    -webkit-transition .25s background-image
+    // transition .25s background-image
     display: block;
     color: transparent;
     background-color: transparent;
 .beegee:hover
     // background-image url(http://cl.ly/image/0X3y1D1T0Q29/content)
-    background-position center
+    // background-position center
 .beegee:active
     background-position bottom
     color: transparent;
     background-color: transparent;
-    //- -webkit-transition none
-
-// text within tabs; I think this can be merged into the previous block
-nav>a>span
-    -webkit-font-smoothing none
-
-// selected
-nav>a.chosen
-    z-index 2
-nav>a:active
-    z-index 3
-nav>a:active, nav>a.chosen
-    margin -1*expand -1*expand -1*expand -1*expand+2
-    color #333
-    border-width expand
-
-// icons
-nav>a>div
-    width 18px
-    height 18px
-    display inline-block
-    background-position 0px 18px
-    bottom -2px
-    position relative
-nav>a.dark:hover>div, nav>a.dark:active>div
-    background-position 0px 0px
+    //- transition none
 
 .about-icon
     background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/about%202x.png")
@@ -92,17 +69,82 @@ nav>a.dark:hover>div, nav>a.dark:active>div
     background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/login%202x.png")
 .search-icon
     background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%202x.png")
+// .search-bottom-icon
+//    background-image url("http://cl.ly/image/0f2g3l0Q1I1z/content")
+// .search-top-icon
+//    background-image url("http://cl.ly/image/3c0J1h3V050A/content")
+
+// text within tabs; I think this can be merged into the previous block
+#gnav .swatch
+    -webkit-font-smoothing none
+
+// selected
+#gnav .swatch.chosen
+    z-index 2
+#gnav .swatch:active
+    z-index 3
+#gnav input.swatch:focus
+    z-index 4
+#gnav .swatch:active, 
+#gnav .swatch.chosen,
+#gnav .swatch:focus
+    margin -1*expand -1*expand -1*expand -1*expand+2
+    color #333
+    border-width expand
+
+//become colored instantly, 
+//(text/icon too,)
+//fade to grey slowly, 
+//(text/icon goes from black to white halfway through the slowly)
+instant-text-color-change = true
+#gnav .swatch,
+#gnav:active .swatch.chosen
+    if instant-text-color-change
+        transition .25s background-color, .25s width
+    else
+        transition .25s background-color, .25s width, 0 .125s color, 0 .125s background-position
+#gnav .swatch .gnav-icon,
+#gnav:active .swatch.chosen .gnav-icon
+    if !instant-text-color-change
+        transition 0 .125s background-position
+#gnav .swatch:active,
+#gnav .swatch.chosen,
+#gnav .swatch:focus,
+#gnav .swatch:hover
+    if instant-text-color-change
+        transition 0s background-color, .25s width
+    else
+        transition 0s background-color, .25s width, 0 0 color, 0 0 background-position
+#gnav .swatch:active .gnav-icon,
+#gnav .swatch.chosen .gnav-icon,
+#gnav .swatch:focus .gnav-icon,
+#gnav .swatch:hover .gnav-icon
+    if !instant-text-color-change
+        transition 0 0 background-position
 
 // hues whose lightness is low at full saturation should have white text at such times
-nav>a.dark:active, 
-nav>a.dark.chosen,
-nav>a.dark:hover
-    color white
+#gnav .swatch.dark:active, 
+#gnav .swatch.dark.chosen,
+#gnav .swatch.dark:hover
+    color #eee
+
+// white icons, too
+#gnav .swatch.dark:active .gnav-icon, 
+#gnav .swatch.dark.chosen .gnav-icon,
+#gnav .swatch.dark:hover .gnav-icon
+    background-position 0px 0px
+
+// search, too
+#gnav>input.swatch#st-search-input:focus,
+#gnav>input.swatch#st-search-input:hover
+    background-position 0px 0px
+    // background-image url("http://cl.ly/image/3c0J1h3V050A/content")
+    color #eee
 
 // pretty self-explanatory
-nav>a.leftmost
+#gnav .swatch.leftmost
     border-left-width none
-nav>a.leftmost:active, nav>a.leftmost.chosen
+#gnav .swatch.leftmost:active, #gnav .swatch.leftmost.chosen
     border-left-width 2px
 
 // color functions!
@@ -114,6 +156,7 @@ deselected()
 colored(hu)
     background-color hsl(hu,100,50)
 selected(hu)
+    //black border thickness
     thickness = 2px
     box-shadow 0 0 5px hsl(hu,100,50), 0 5px 10px hsla(0,0,0,.5), - thickness 0 0 #333, thickness 0 0 #333
     border-color hsl(hu,100,50)
@@ -122,24 +165,36 @@ for index in 1 .. 6
     hu = 60 * index + 45 - 180
     
     //deselected
-    nav>a:nth-of-type({index}), 
-    nav:active>a:nth-of-type({index}).chosen
+    #gnav .swatch:nth-child({index}), 
+    #gnav:active .swatch:nth-child({index}).chosen
         uncolored(hu)
         
     //hovered or selected
-    nav>a:nth-of-type({index}):hover,
-    nav>a:nth-of-type({index}):active, 
-    nav>a:nth-of-type({index}).chosen
+    #gnav .swatch:nth-child({index}):hover,
+    #gnav .swatch:nth-child({index}):active, 
+    #gnav .swatch:nth-child({index}).chosen
         colored(hu)
         
     //completely selected
-    nav>a:nth-of-type({index}):active, 
-    nav>a:nth-of-type({index}).chosen
+    #gnav .swatch:nth-child({index}):active, 
+    #gnav .swatch:nth-child({index}).chosen
         selected(hu)
 
+//deselected
+#gnav #st-search-input
+    uncolored(60 * 6 + 45 - 180)
+//hovered or selected
+#gnav #st-search-input:hover,
+#gnav #st-search-input:focus
+    colored(60 * 6 + 45 - 180)
+//completely selected
+#gnav #st-search-input:focus
+    selected(60 * 6 + 45 - 180)
+
 // normal tab, or newly deselected tab
-nav>a, 
-nav:active>a.chosen
+#gnav .swatch, 
+#gnav:active .swatch.chosen,
+#st-search-input
     font-family munroregular
     tpad = vpad + voff
     bpad = vpad - voff
@@ -147,6 +202,7 @@ nav:active>a.chosen
     display inline-block
     text-transform uppercase
     font-size size
+    height size
     text-decoration none
     color #333
     border-style solid
@@ -160,3 +216,31 @@ nav:active>a.chosen
     border-color #333
     line-height 1
     z-index 1
+
+//working around Opera quirks
+x:-o-prefocus, #st-search-input
+    top -1px
+
+// normal icons, or newly deselected icons
+#gnav .swatch .gnav-icon,
+#gnav:active .swatch.chosen .gnav-icon
+    width 18px
+    height 18px
+    display inline-block
+    background-position 0px 18px
+    bottom -2px
+    position relative
+
+//search-specific overrides
+#gnav>input.swatch#st-search-input {
+    // outline: none;
+    // margin: 0;
+    // padding: 0;
+    // box-shadow: none;
+    // border: none;
+    // background-color: transparent;
+    background-image url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%20bigmargins%202x.png")
+    background-position 0px -38px
+    background-repeat no-repeat
+    padding-left hpad + 22px
+}
