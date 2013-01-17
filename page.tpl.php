@@ -94,7 +94,7 @@
                         print(" chosen");
                     }
 			
-                    ?>">
+                    ?>" style="width: 70px;">
                             <div class="about-icon gnav-icon"></div><span> about</span></a><a href="<?php print $base_path; ?>join" class="swatch dark<?php
 			
                     $path = trim($_GET['q'], '/');         // get the current normal drupal path
@@ -105,21 +105,21 @@
                         print(" chosen");
                     }
 			
-                    ?>">
+                    ?>" style="width: 52px;">
                             <div class="join-icon gnav-icon"></div><span> join</span></a><a href="<?php print $base_path; ?>games" class="swatch<?php
                         if (isset($node)) {
                             if ($node->type == 'game' || $node->type == 'games_listing' || $node->type == 'game_folder')  {
                                 print(" chosen");
                             }
                         }
-                        ?>">
+                        ?>" style="width: 70px;">
                             <div class="games-icon gnav-icon"></div><span> games</span></a><a href="<?php print $base_path; ?>events" class="swatch<?php
                         if (isset($node)) {
                             if ($node->type == 'event' || $node->type == 'featured_events')  {
                                 print(" chosen");
                             }
                         }
-                        ?>">
+                        ?>" style="max-width: 76px;">
                             <div class="events-icon gnav-icon"></div><span> events</span></a><a 
                             
                             <?php if ($user->uid): ?>
@@ -127,7 +127,7 @@
                                     if (arg(0) == 'user') {
                                         print(" chosen");
                                     }
-                                    ?>">
+                                    ?>" style="max-width: 224px;">
                                     <div class="profile-icon gnav-icon"></div><span> <?php print $user->name; ?></span>
                                     
                             <?php else: ?>
@@ -135,20 +135,14 @@
                                     if (arg(0) == 'user') {
                                         print(" chosen");
                                     }
-                                    ?>">
+                                    ?>" style="width: 124px;">
                                     <div class="login-icon gnav-icon"></div><span> login/signup</span>
                                     
                             <?php endif; ?>
                         
-                        </a><!--<a href="#" class="swatch dark">--><!--<div class="search-icon gnav-icon"></div>--><input type="text" id="st-search-input" class="swatch dark st-search-input" placeholder="Search"/><!--</a>-->
+                        </a><input placeholder="Search" type="text" id="st-search-input" class="swatch dark st-search-input"/>
                         
                             <style>
-                            #st-search-input {
-                                width: 54px;
-                            }
-                            #st-search-input:focus {
-                                width: 108px;
-                            }
                             </style>
                             
                         

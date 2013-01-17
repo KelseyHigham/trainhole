@@ -11,6 +11,10 @@ hpad = 10px //horizontal padding in the #gnav .swatches
 vpad = hpad - 7 //vertical padding therein
 voff = 1px //vertical offset for the text
 expand = 2px //how much wider the selected #gnav .swatch should be
+darktext()
+    color #333
+whitetext()
+    color #eee
 
 @font-face {
     font-family: 'munroregular';
@@ -89,24 +93,18 @@ expand = 2px //how much wider the selected #gnav .swatch should be
 #gnav .swatch.chosen,
 #gnav .swatch:focus
     margin -1*expand -1*expand -1*expand -1*expand+2
-    color #333
+    darktext()
     border-width expand
 
-//become colored instantly, 
-//(text/icon too,)
-//fade to grey slowly, 
-//(text/icon goes from black to white halfway through the slowly)
-instant-text-color-change = true
-#gnav .swatch,
-#gnav:active .swatch.chosen
-    if instant-text-color-change
-        transition .25s background-color, .25s width
-    else
-        transition .25s background-color, .25s width, 0 .125s color, 0 .125s background-position
-#gnav .swatch .gnav-icon,
-#gnav:active .swatch.chosen .gnav-icon
-    if !instant-text-color-change
-        transition 0 .125s background-position
+
+
+//transition animations for changing from colored to uncolored
+
+
+instant_text_color_change = true
+
+
+//become colored instantly
 #gnav .swatch:active,
 #gnav .swatch.chosen,
 #gnav .swatch:focus,
@@ -115,6 +113,8 @@ instant-text-color-change = true
         transition 0s background-color, .25s width
     else
         transition 0s background-color, .25s width, 0 0 color, 0 0 background-position
+
+// (icon too)
 #gnav .swatch:active .gnav-icon,
 #gnav .swatch.chosen .gnav-icon,
 #gnav .swatch:focus .gnav-icon,
@@ -122,11 +122,28 @@ instant-text-color-change = true
     if !instant-text-color-change
         transition 0 0 background-position
 
+// fade to grey slowly
+#gnav .swatch,
+#gnav:active .swatch.chosen
+    if instant-text-color-change
+        transition .25s background-color, .25s width
+    else
+        transition .25s background-color, .25s width, 0 .125s color, 0 .125s background-position
+
+// (icon goes from black to white halfway through the slowly)
+#gnav .swatch .gnav-icon,
+#gnav:active .swatch.chosen .gnav-icon
+    if !instant-text-color-change
+        transition 0 .125s background-position
+
+
+
+
 // hues whose lightness is low at full saturation should have white text at such times
 #gnav .swatch.dark:active, 
 #gnav .swatch.dark.chosen,
 #gnav .swatch.dark:hover
-    color #eee
+    whitetext()
 
 // white icons, too
 #gnav .swatch.dark:active .gnav-icon, 
@@ -138,8 +155,21 @@ instant-text-color-change = true
 #gnav>input.swatch#st-search-input:focus,
 #gnav>input.swatch#st-search-input:hover
     background-position 0px 0px
-    // background-image url("http://cl.ly/image/3c0J1h3V050A/content")
-    color #eee
+    whitetext()
+
+// search placeholder text, too
+#st-search-input.dark
+    &:hover,
+    &:focus
+        &::-webkit-input-placeholder
+            whitetext()
+        &:-moz-placeholder
+            whitetext()
+        &::-moz-placeholder
+            whitetext()
+        &:-ms-input-placeholder
+            whitetext()
+        
 
 // pretty self-explanatory
 #gnav .swatch.leftmost
@@ -204,7 +234,7 @@ for index in 1 .. 6
     font-size size
     height size
     text-decoration none
-    color #333
+    darktext()
     border-style solid
     border-left 2px #333 solid
     border-left-color #333
@@ -216,6 +246,9 @@ for index in 1 .. 6
     border-color #333
     line-height 1
     z-index 1
+    white-space nowrap
+    // The following causes weird problems in Firefox and Opera:
+    // overflow hidden
 
 //working around Opera quirks
 x:-o-prefocus, #st-search-input
@@ -231,9 +264,9 @@ x:-o-prefocus, #st-search-input
     bottom -2px
     position relative
 
-//search-specific overrides
+//search-specific hardcore overrides
 #gnav>input.swatch#st-search-input {
-    // outline: none;
+    outline: none;
     // margin: 0;
     // padding: 0;
     // box-shadow: none;
@@ -243,4 +276,19 @@ x:-o-prefocus, #st-search-input
     background-position 0px -38px
     background-repeat no-repeat
     padding-left hpad + 22px
+}
+#st-search-input
+    &::-webkit-input-placeholder
+        darktext()
+    &:-moz-placeholder
+        darktext()
+    &::-moz-placeholder
+        darktext()
+    &:-ms-input-placeholder
+        darktext()
+#st-search-input {
+    width: 54px;
+}
+#st-search-input:focus {
+    width: 108px;
 }

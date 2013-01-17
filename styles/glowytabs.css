@@ -62,14 +62,6 @@
   color: #333;
   border-width: 2px;
 }
-#gnav .swatch,
-#gnav:active .swatch.chosen {
-  -webkit-transition: 0.25s background-color, 0.25s width;
-  -moz-transition: 0.25s background-color, 0.25s width;
-  -o-transition: 0.25s background-color, 0.25s width;
-  -ms-transition: 0.25s background-color, 0.25s width;
-  transition: 0.25s background-color, 0.25s width;
-}
 #gnav .swatch:active,
 #gnav .swatch.chosen,
 #gnav .swatch:focus,
@@ -79,6 +71,14 @@
   -o-transition: 0s background-color, 0.25s width;
   -ms-transition: 0s background-color, 0.25s width;
   transition: 0s background-color, 0.25s width;
+}
+#gnav .swatch,
+#gnav:active .swatch.chosen {
+  -webkit-transition: 0.25s background-color, 0.25s width;
+  -moz-transition: 0.25s background-color, 0.25s width;
+  -o-transition: 0.25s background-color, 0.25s width;
+  -ms-transition: 0.25s background-color, 0.25s width;
+  transition: 0.25s background-color, 0.25s width;
 }
 #gnav .swatch.dark:active,
 #gnav .swatch.dark.chosen,
@@ -93,6 +93,22 @@
 #gnav>input.swatch#st-search-input:focus,
 #gnav>input.swatch#st-search-input:hover {
   background-position: 0px 0px;
+  color: #eee;
+}
+#st-search-input.dark:hover::-webkit-input-placeholder,
+#st-search-input.dark:focus::-webkit-input-placeholder {
+  color: #eee;
+}
+#st-search-input.dark:hover:-moz-placeholder,
+#st-search-input.dark:focus:-moz-placeholder {
+  color: #eee;
+}
+#st-search-input.dark:hover::-moz-placeholder,
+#st-search-input.dark:focus::-moz-placeholder {
+  color: #eee;
+}
+#st-search-input.dark:hover:-ms-input-placeholder,
+#st-search-input.dark:focus:-ms-input-placeholder {
   color: #eee;
 }
 #gnav .swatch.leftmost {
@@ -228,6 +244,7 @@
   border-color: #333;
   line-height: 1;
   z-index: 1;
+  white-space: nowrap;
 }
 x:-o-prefocus,
 #st-search-input {
@@ -243,9 +260,28 @@ x:-o-prefocus,
   position: relative;
 }
 #gnav>input.swatch#st-search-input {
+  outline: none;
   background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%20bigmargins%202x.png");
   background-position: 0px -38px;
   background-repeat: no-repeat;
   padding-left: 32px;
+}
+#st-search-input::-webkit-input-placeholder {
+  color: #333;
+}
+#st-search-input:-moz-placeholder {
+  color: #333;
+}
+#st-search-input::-moz-placeholder {
+  color: #333;
+}
+#st-search-input:-ms-input-placeholder {
+  color: #333;
+}
+#st-search-input {
+  width: 54px;
+}
+#st-search-input:focus {
+  width: 108px;
 }
 
