@@ -215,7 +215,10 @@
 			
             <div class="grid-3">
 				
+                <?= views_embed_view('random_game', 'default'); ?>
+				
                 <?= views_embed_view('octobers_past', 'default'); ?>
+                
 				
                 <h3>Upcoming Events</h3>
                 <?php global $user; if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
