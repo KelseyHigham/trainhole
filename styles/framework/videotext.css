@@ -19,6 +19,9 @@ h1{
     font-size:64px;
     font-weight: normal;
 }
+body.node-type-game h1{
+    font-weight: bold;
+}
 h2
 {
     font-size:32px;
