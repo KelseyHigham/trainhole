@@ -16,6 +16,7 @@ darktext()
 whitetext()
     color #eee
 
+/*
 @font-face {
     font-family: 'munroregular';
     // The following line doesn't work for the test site, because of cross-domain stuff.
@@ -23,6 +24,17 @@ whitetext()
     src: url('../fonts/munro/munro-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'munroregular';
+    src: url('../fonts/munro/munro-webfont.eot');
+    src: url('../fonts/munro/munro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/munro/munro-webfont.woff') format('woff'),
+         url('../fonts/munro/munro-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 // defaults for the preview version; not necessary in the full version
