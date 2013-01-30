@@ -54,7 +54,7 @@
   <?php print $scripts; ?>
   
   
-  <meta name="viewport" content="width=1136" />
+  <meta name="viewport" content="width=960" />
   <?php if (drupal_is_front_page()): ?>
   <meta name='description' content="A student organization of game makers and fans, at San José State University. Play games we made, or watch videos of guest speakers!" />
   <link rel='image_src' href='sites/all/themes/trainhole/images/thumbnail.gif' />

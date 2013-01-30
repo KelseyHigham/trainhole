@@ -169,7 +169,7 @@
         </div>
     </div>
 </header>
-<div class="container-12" style="padding-left: 10px; padding-right: 10px;">
+<div class="container-12" style="">
             
         <!--title-->
         <div class="grid-12"><?php print $messages; ?></div>
