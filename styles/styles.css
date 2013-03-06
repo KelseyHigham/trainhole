@@ -489,6 +489,26 @@ a.deviantarturl {
 background-color: #425244;
 border-color: #425244;
 }
+a.tumblrurl {
+    background-color: #2c4762;
+    border-color: #2c4762;
+}
+a.backloggeryurl {
+    background-color: #9C3700;
+    border-color: #9C3700;
+}
+a.githuburl {
+    background-color: #4183c4;
+    border-color: #4183c4;
+}
+a.soundcloudurl {
+    background-color: #F76700;
+    border-color: #F76700;
+}
+a.bandcampurl {
+    background-color: #408294;
+    border-color: #408294;
+}
 a.linkedinurl {
 background-color: #1C7EAB;
 border-color: #1C7EAB;
@@ -509,6 +529,9 @@ a.googlegroupsurl {
 background-color: #E62E19;
 border-color: #E62E19;
 }
+a.websiteurl.margarine {
+    margin: 0 10px 20px;
+}
 a.websiteurl {
 background-color: blue;
 border-color: blue;
@@ -521,14 +544,27 @@ position: relative;
 a.websiteurl:hover {
 width: auto;
 min-width: 198px;
+z-index: 1;
+}
+a.websiteurl.margarine:hover {
+    width: 198px;
+/*    text-shadow: blue 0 0 20px, blue 0 0 20px, blue 0 0 20px, blue 0 0 20px;*/
+/*    overflow: visible;*/
 }
 a.websiteurl:visited {
 background-color: purple;
 border-color: purple;
 } 
+a.websiteurl.margarine:visited {
+/*    text-shadow: purple 0 0 20px, purple 0 0 20px, purple 0 0 20px, purple 0 0 20px !important;*/
+/*text-shadow-color: purple, purple, purple, purple;*/
+}
 a.websiteurl:active {
 background-color: red;
 border-color: red;
+}
+a.websiteurl.margarine:active:hover {
+/*    text-shadow: 0 0 20px red,0 0 20px red,0 0 20px red,0 0 20px red;*/
 }
 a.logout {
 background-color: red;
