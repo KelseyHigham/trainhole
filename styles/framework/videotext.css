@@ -22,18 +22,19 @@ h1{
 body.node-type-game h1{
     font-weight: bold;
 }
-h2
+h2, span.h2
 {
     font-size:32px;
 	line-height:1em;
+    display: block;
 }
 h2.calm {
     font-weight: normal;
 }
-h3{
+h3, span.h3 {
     font-size:24px
 }
-h4{
+h4, span.h4 {
     font-size:16px
 }
 h5{
@@ -52,7 +53,8 @@ li{
 p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,iframe{
     margin-bottom:20px
 }
-blockquote {
+blockquote, span.blockquote, ol.blockquote {
+    display: block;
     padding: 40px 40px 20px 40px;
     border-width: 0 0 0 20px;
     border-style: solid;
@@ -65,4 +67,7 @@ blockquote *{
 }
 code {
     display: inline-block;
+}
+big {
+    font-size: larger;
 }
