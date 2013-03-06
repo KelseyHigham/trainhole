@@ -399,24 +399,24 @@ print '<pre>';
         || $parent_folder =='The Photos Challenge'  
         || $parent_folder =='The Genres Challenge' 
         || $parent_folder =='The 3D Game Challenge'
-        || $parent_folder =='Miscellaneous'  ): ?>
+        /*|| $parent_folder =='Miscellaneous'*/  ): ?>
 	 
-        <a href="<?= $node_url ?>" class="horizontalgamebox darkLink classic" style="height: 32px; text-align: left;">
-            <div class="grid-2 alpha omega" style="font-weight: normal; text-transform: none; font-style: italic; font-family: Georgia;">
-                <?= 
-                //Miscellaneous is only here temporarily, during the anticipated legacy influx. Once that's over, we can revert miscellaneous games to be big again.
-                ($parent_folder != 'Miscellaneous')?"classic":"misc"
-                ?>
-            </div> 
-            <div style="float:right;" class="horizontalonelinescreenshot">
-                <?= render($content['field_game_screenshot']) ?>
-            </div>
-            <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                <?= $title ?>
-            </div>
-        </a>
+            <a href="<?= $node_url ?>" class="horizontalgamebox darkLink classic" style="height: 32px; text-align: left;">
+                <div class="grid-2 alpha omega" style="font-weight: normal; text-transform: none; font-style: italic; font-family: Georgia;">
+                    <?= 
+                    //Miscellaneous is only here temporarily, during the anticipated legacy influx. Once that's over, we can revert miscellaneous games to be big again.
+                    ($parent_folder != 'Miscellaneous')?"classic":"misc"
+                    ?>
+                </div> 
+                <div style="float:right;" class="horizontalonelinescreenshot">
+                    <?= render($content['field_game_screenshot']) ?>
+                </div>
+                <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                    <?= $title ?>
+                </div>
+            </a>
 		
-    <?php else: //If not, do a full-size game box. ?>
+        <?php else: //If not, do a full-size game box. ?>
 	
         <a href="<?= $node_url ?>" class="horizontalgamebox darkLink">
             <div class="horizontalgameboxscreenshot"><?php print render($content['field_game_screenshot']); ?></div>
