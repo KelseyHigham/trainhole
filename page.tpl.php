@@ -216,22 +216,25 @@
             <div class="grid-3">
 				
                 <?= views_embed_view('random_game', 'default'); ?>
-				
-                <?= views_embed_view('octobers_past', 'default'); ?>
                 
 				
                 <h3>Upcoming Events</h3>
-                <?php global $user; if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
-                    <a href="<?php print url(); ?>node/add/event" class="event small" style="border-style: dotted;">
-                        <div class="title">+ Add an Event</div>
-                    </a>
-   
-                <?php endif; ?>
-                <?php print views_embed_view('front_page_upcoming_events', 'default'); ?>
-                <a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">All Events</a>
+                
+                    <?php global $user; if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
+                        <a href="<?php print url(); ?>node/add/event" class="event small" style="border-style: dotted;">
+                            <div class="title">+ Add an Event</div>
+                        </a>
+                    <?php endif; ?>
+                
+                    <?php print views_embed_view('front_page_upcoming_events', 'default'); ?>
+                
+                    <a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">All Events</a>
+                
                 <h3>Recent Events</h3>
-                <?php print views_embed_view('front_page_past_events', 'default'); ?>
-                <a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">More Events</a>
+                    <?php print views_embed_view('front_page_past_events', 'default'); ?>
+                    <a class="small event stack" style="font-size: 32px; line-height: 1em;" href="events">More Events</a>
+				
+                <?= views_embed_view('octobers_past', 'default'); ?> 
 				
 				
             </div>
