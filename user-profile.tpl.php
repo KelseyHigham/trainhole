@@ -74,11 +74,17 @@
     <div class="grid-12 alpha omega">
         <div style="margin-left: -10px; margin-right: -10px; white-space:nowrap; margin-top: 20px;">
             <div class="grid-3"><?php print render($user_profile['field_user_facebook_url'])?></div>
+            <div class="grid-3"><?php print render($user_profile['field_user_tumblr_url'])?></div>
+            <div class="grid-3"><?php print render($user_profile['field_user_deviantart_url'])?></div>
+            <div class="grid-3"><?php print render($user_profile['field_user_github_url'])?></div>
+            <div class="grid-3"><?php print render($user_profile['field_user_soundcloud_url'])?></div>
+            <div class="grid-3"><?php print render($user_profile['field_user_bandcamp_url'])?></div>
             <div class="grid-3"><?php print render($user_profile['field_user_steam_url'])?></div>
+            <div class="grid-3"><?php print render($user_profile['field_user_backloggery_url'])?></div>
             <div class="grid-3"><?php print render($user_profile['field_user_linkedin_url'])?></div>
             <div class="grid-3"><?php print render($user_profile['field_user_googleplus_url'])?></div>
             <div class="grid-3"><?php print render($user_profile['field_user_twitter_url'])?></div>
-            <div class="grid-3"><?php print render($user_profile['field_user_website_url'])?></div>
+            <?php print render($user_profile['field_user_website_url'])?>
         </div>
     </div>
 
