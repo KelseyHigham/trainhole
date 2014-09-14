@@ -566,6 +566,10 @@ border-color: red;
 a.websiteurl.margarine:active:hover {
 /*    text-shadow: 0 0 20px red,0 0 20px red,0 0 20px red,0 0 20px red;*/
 }
+a.publicemail {
+background-color: #934C00;
+border-color: #934C00;
+}
 a.logout {
 background-color: red;
 border-color: red;

@@ -85,10 +85,11 @@
 [5] => field_game_videos [6] => field_game_executable 
 [7] => field_game_parent_challenge ) */ ?>
 
-<?php /*
-print '<pre>';
-    print_r(get_defined_vars());
-    print '</pre>'; */
+<?php  
+    // print '<pre>';
+    // print_r(get_defined_vars());
+    // print_r($field_game_parent_folder);
+    // print '</pre>'; 
     ?>
 
     <?php if($page || (isset($in_preview) && $in_preview)): ?>
@@ -216,10 +217,10 @@ print '<pre>';
                     </div>
                 <?php endif; ?>
 
-
-
-
-
+                <!--Link to Game's Website-->
+                <?php if ($field_game_website_url): ?>
+                    <div class="grid-3 alpha omega"><?php print render($content['field_game_website_url'])?></div>
+                <?php endif; ?>
 
                 <!--Credits-->
                 <?php if ($field_game_credits): ?>
@@ -389,16 +390,27 @@ print '<pre>';
         $parent_folder = render($content['field_game_parent_folder']);
         if ($parent_folder =='Abdo Fere' 
         || $parent_folder =='The Pong Challenge, Fall 2008 Edition'
+        || $field_game_parent_folder[0]['nid'] == 478
         || $parent_folder =='The 8-Bit Challenge' 
-        || $parent_folder =='The Shmup Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 479
+        || $parent_folder =='The Shmup Challenge, Spring 2009' 
+        || $field_game_parent_folder[0]['nid'] == 480
         || $parent_folder =='The Tower Defense Challenge' 
-        || $parent_folder =='The Collaborative Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 481
+        || $parent_folder =='The Collaborative Game Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 482
         || $parent_folder =='The Facebook Game Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 483
         || $parent_folder =='The Asynchronous Collaboration Game Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 488
         || $parent_folder =='The Budget Crisis Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 485
         || $parent_folder =='The Photos Challenge'  
+        || $field_game_parent_folder[0]['nid'] == 486
         || $parent_folder =='The Genres Challenge' 
+        || $field_game_parent_folder[0]['nid'] == 489
         || $parent_folder =='The 3D Game Challenge'
+        || $field_game_parent_folder[0]['nid'] == 487
         /*|| $parent_folder =='Miscellaneous'*/  ): ?>
 	 
             <a href="<?= $node_url ?>" class="horizontalgamebox darkLink classic" style="height: 32px; text-align: left;">

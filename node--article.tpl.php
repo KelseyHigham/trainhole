@@ -82,13 +82,16 @@
 
 <?php if ($page): ?>
 <style>
-p,img,iframe {
+p,iframe {
     margin-bottom: 1.5em;
 }
 </style>
 <?php endif; ?>
 <style>
-iframe[src^="http://www.youtube.com/embed"] {
+iframe[src^="http://www.youtube.com/embed"], 
+iframe[src^="http://player.vimeo.com"], 
+iframe[src^="https://www.youtube.com/embed"], 
+iframe[src^="https://player.vimeo.com"] {
     width: 460px;
     height: 260px;
 }
