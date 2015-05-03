@@ -36,9 +36,12 @@
 .about-icon {
   background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/about%202x.png");
 }
-.join-icon {
-  background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/join%202x.png");
-}
+  .join-icon {
+    background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/join%202x.png");
+  }
+    .forum-icon {
+      background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/forum%202x.png");
+    }
 .games-icon {
   background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/games%202x.png");
 }
@@ -101,8 +104,8 @@
 #gnav .swatch.dark:hover .gnav-icon {
   background-position: 0px 0px;
 }
-#gnav>input.swatch#st-search-input:focus,
-#gnav>input.swatch#st-search-input:hover {
+#gnav input.swatch#st-search-input:focus,
+#gnav input.swatch#st-search-input:hover {
   background-position: 0px 0px;
   color: #eee;
 }
@@ -270,7 +273,7 @@ x:-o-prefocus,
   bottom: -2px;
   position: relative;
 }
-#gnav>input.swatch#st-search-input {
+#gnav input.swatch#st-search-input {
   outline: none;
   background-image: url("http://sjsugamedev.com/sites/all/themes/trainhole/images/tab%20bar%20icons/search%20bigmargins%202x.png");
   background-position: 0px -38px;
@@ -295,4 +298,3 @@ x:-o-prefocus,
 #st-search-input:focus {
   width: 108px;
 }
-

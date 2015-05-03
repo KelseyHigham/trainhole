@@ -433,17 +433,15 @@
         <a href="<?= $node_url ?>" class="horizontalgamebox darkLink">
             <div class="horizontalgameboxscreenshot"><?php print render($content['field_game_screenshot']); ?></div>
             <span class="horizontalgameboxfixedheight">
-                <?= $title ?>
-                <br/><br/>
-                <p class="horizontalgameboxtext"><?= render($content['field_game_information']) ?></p>
+                <h2><?= $title ?></h2>
+                <?= strip_tags(render($content['field_game_information']), '<p><kbd><ol><ul><li><br>') ?>
             </span>
             <span class="horizontalgameboxfixedheight">
-                <p class="horizontalgameboxtext">
-                    <br/>
-                    Made for <?php print render($content['field_game_parent_folder']) ?>
+                <p class="horizontalgameboxtext horizontalgameboxfoldername">Made for <?php print render($content['field_game_parent_folder']) ?>
                 </p>
             </span>
         </a>
+        
 		
     <?php endif; ?>
 <?php endif; ?>

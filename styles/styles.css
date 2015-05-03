@@ -379,10 +379,14 @@ a.gamebox p {
 font-size: 16px;
 }
 		
+
+
+
+
 /* HORIZONTAL GAMEBOX (wip) */
 
 a.horizontalgamebox {
-height: 260px; 
+height: 280px; 
 width: 580px;
 overflow: hidden; 
 border: 5px #333 solid;
@@ -394,23 +398,30 @@ margin-bottom: 40px;
 text-transform: uppercase; /* IT'S BETTER THIS WAY */
 display: block;
 font-weight: bold;
-text-align: center;
-line-height: 1;
-font-size: 32px;
-float: left;
+text-align: left;
+line-height: 16px;
+font-size: 8px;
+float: left;                       
+-webkit-font-smoothing: antialiased;
 /*            border-radius: 20px;*/
 }
+a.horizontalgamebox span.horizontalgameboxfixedheight h2 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
 a.horizontalgamebox div.horizontalgameboxscreenshot {
-height: 260px;
-width: 260px;
+height: 280px;
+width: 280px;
 margin-bottom: 20px;
 position: relative;
 float: left;
-margin-right: 40px;
+margin-right: 20px;
+	background-color: black;
 }
 a.horizontalgamebox div.horizontalgameboxscreenshot img {
-max-width: 260px;
-max-height: 260px;
+max-width: 280px;
+max-height: 280px;
 position: absolute;
 margin: auto;
 top: 0;
@@ -420,13 +431,43 @@ right: 0;
 /*            border-radius: 40px/130px;*/
 }
 a.horizontalgamebox span.horizontalgameboxfixedheight {
-height: 160px;
+height: 205px;
 overflow: hidden;
 display: block;
-margin: 20px;
+margin: 0px 0 16px;
+padding: 20px;
 }
-a.horizontalgamebox p.horizontalgameboxtext {
-font-size: 16px;
+a.horizontalgamebox span.horizontalgameboxfixedheight p {
+    margin-bottom: 16px;
+	
+/*	white-space: pre-wrap;*/
+    word-wrap: break-word;                  
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+a.horizontalgamebox span.horizontalgameboxfixedheight kbd {
+    font-family: consolas, courier, lucida grande, courier new, monospace;
+    background-color: #333;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    line-height: 16px;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 8px;
+margin-top: 0;
+margin-bottom: 0;
+}
+a.horizontalgamebox span.horizontalgameboxfixedheight kbd.box {
+    background-color: transparent;
+}
+
+a.horizontalgamebox p.horizontalgameboxtext.horizontalgameboxfoldername {
+    text-align: right;
+    margin: -20px;
 }
 a.horizontalgamebox div.horizontalonelinescreenshot img {
 	height: 62px;
@@ -435,7 +476,97 @@ a.horizontalgamebox div.horizontalonelinescreenshot img {
 	position: relative;
 }
 
-		
+
+/* for credits */
+ul.comma-separated-list {
+  display: inline;
+  list-style: none;
+  margin: 0;
+}
+
+ul.comma-separated-list li {
+  display: inline;
+}
+
+ul.comma-separated-list li:after {
+  content: ", ";
+}
+
+
+		                
+
+
+/* RANDOM GAMEBOX */
+
+a.random-3col-vertical-gamebox {
+ display: block;
+ padding: 18px 18px 17px 18px;
+ border: 2px solid #333;
+ width: 180px;
+ text-decoration: none;
+ margin-bottom: 20px;
+}
+a.random-3col-vertical-gamebox.darkLink {
+-webkit-transition: 0.25s background-color, 0s 0.125s color;
+-moz-transition: 0.25s background-color, 0s 0.125s color;
+-o-transition: 0.25s background-color, 0s 0.125s color;
+-ms-transition: 0.25s background-color, 0s 0.125s color;
+transition: 0.25s background-color, 0s 0.125s color;
+}
+a.random-3col-vertical-gamebox.darkLink:active {
+-webkit-transition: 0s background-color, 0s color;
+-moz-transition: 0s background-color, 0s color;
+-o-transition: 0s background-color, 0s color;
+-ms-transition: 0s background-color, 0s color;
+transition: 0s background-color, 0s color;
+}
+a.random-3col-vertical-gamebox>img {
+max-width: 180px;
+max-height: 180px;
+margin-bottom: 11px;
+}
+a.random-3col-vertical-gamebox>.screenshotcontainer {
+ width: 180px;
+ height: 180px;
+ margin-bottom: 16px;
+ position: relative;
+}
+a.random-3col-vertical-gamebox>.screenshotcontainer>img {
+ max-width: 180px;
+ max-height: 180px;
+
+ position: absolute;
+ margin: auto 0;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ /*right: 0;
+*/
+}
+a.random-3col-vertical-gamebox>div.justfour {
+ text-transform: uppercase;
+ font-weight: bold;                 
+ -webkit-font-smoothing: antialiased; 
+   
+ overflow-y: hidden;
+ max-height: 96px;
+}
+a.random-3col-vertical-gamebox>div.justfour>h2 {
+ line-height: 1;
+ margin: 0;
+font-size: 24px;
+margin-bottom: 3px;
+}
+a.random-3col-vertical-gamebox>div.justfour>p {
+ line-height: 12px;
+ font-size: 7px;
+ margin: 0;          
+ word-wrap: break-word;              
+ -webkit-hyphens: auto;
+ -moz-hyphens: auto;
+ hyphens: auto;
+ 
+}
 		
 
 
@@ -854,4 +985,40 @@ ul.apps div.app-fallback {
 ul.apps div.apps-fallback:active {
     background-color: white;
     color: #934C00
+}
+
+/* PIXEL ART */
+span.pixel-art {
+    font-family: bittregular;
+    line-height: 0.5em;
+    display: inline-block;
+    white-space: pre;
+    font-size: 1px;
+    -webkit-font-smoothing: none;
+}
+span.pixel-art.x2 {
+    font-size: 2px;
+}
+span.pixel-art.x3 {
+    font-size: 3px;
+}
+
+@font-face {
+  font-family: 'bittregular';
+  src: url("../fonts/bitt/bitt-webfont.eot");
+  src: url("../fonts/bitt/bitt-webfont.eot?#iefix") format('embedded-opentype'), 
+       url("../fonts/bitt/bitt-webfont.woff") format('woff'), 
+       url("../fonts/bitt/bitt-webfont.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ALIASED IMAGES; CODE STOLEN FROM THEMUSHROOMKINGDOM.NET/TMK.CSS */
+img[src$=".gif"], img[src$=".png"] {
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+	-ms-interpolation-mode:nearest-neighbor;
 }
