@@ -73,7 +73,7 @@
 
     <div class="grid-12 alpha omega">
         <div style="margin-left: -10px; margin-right: -10px; white-space:nowrap; margin-top: 20px;">
-            <?php if ($user_profile['field_user_email']): ?>
+            <?php if (isset($user_profile['field_user_email'])): ?>
                 <div class="grid-3"><a href="mailto:<?php print render($user_profile['field_user_email'])?>" class="colored button publicemail">Email</a></div>
             <?php endif; ?>
             <div class="grid-3"><?php print render($user_profile['field_user_facebook_url'])?></div>
