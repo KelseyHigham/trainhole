@@ -94,7 +94,7 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
                     }
             
                     ?>" style="width: 70px;">
-                    <div class="about-icon gnav-icon"></div><span> about</span></a><a href="<?php print $base_path; ?>forum" class="swatch dark<?php
+                    <div class="about-icon gnav-icon"></div><span> about</span></a><!--<a href="<?php print $base_path; ?>forum" class="swatch dark<?php
             
                         $path = trim($_GET['q'], '/');         // get the current normal drupal path
                         $path = drupal_get_path_alias($path);  // get its alias
@@ -105,7 +105,7 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
                         }
             
                         ?>" style="width: 72px;">
-                        <div class="forum-icon gnav-icon"></div><span> forum</span></a><a href="<?php print $base_path; ?>games" class="swatch<?php
+                        <div class="forum-icon gnav-icon"></div><span> forum</span></a>--><a href="<?php print $base_path; ?>games" class="swatch<?php
                             if (isset($node)) {
                                 if ($node->type == 'game' || $node->type == 'games_listing' || $node->type == 'game_folder')  {
                                     print(" chosen");

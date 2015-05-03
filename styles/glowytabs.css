@@ -1,3 +1,5 @@
+/* NOTICE: As of May 3, 2015, this is no longer generated from glowytabs.styl. */
+
 /*
 @font-face {
     font-family: 'munroregular';
@@ -132,108 +134,116 @@
 #gnav .swatch.leftmost.chosen {
   border-left-width: 2px;
 }
+
 #gnav .swatch:nth-child(1),
 #gnav:active .swatch:nth-child(1).chosen {
-  background-color: #ba97dd;
+  background-color: #FF5968;
 }
 #gnav .swatch:nth-child(1):hover,
 #gnav .swatch:nth-child(1):active,
 #gnav .swatch:nth-child(1).chosen {
-  background-color: #bf00ff;
+  background-color: #FF5968;
 }
 #gnav .swatch:nth-child(1):active,
 #gnav .swatch:nth-child(1).chosen {
-  -webkit-box-shadow: 0 0 5px #bf00ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #bf00ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #bf00ff;
+  -webkit-box-shadow: 0 0 5px #FF5968, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #FF5968, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #FF5968;
 }
+
 #gnav .swatch:nth-child(2),
 #gnav:active .swatch:nth-child(2).chosen {
-  background-color: #e18cb0;
+  background-color: #FAC000;
 }
 #gnav .swatch:nth-child(2):hover,
 #gnav .swatch:nth-child(2):active,
 #gnav .swatch:nth-child(2).chosen {
-  background-color: #ff0040;
+  background-color: #FAC000;
 }
 #gnav .swatch:nth-child(2):active,
 #gnav .swatch:nth-child(2).chosen {
-  -webkit-box-shadow: 0 0 5px #ff0040, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #ff0040, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #ff0040;
+  -webkit-box-shadow: 0 0 5px #FAC000, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #FAC000, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #FAC000;
 }
+
 #gnav .swatch:nth-child(3),
 #gnav:active .swatch:nth-child(3).chosen {
-  background-color: #cf9c6d;
+  background-color: #52F676;
 }
 #gnav .swatch:nth-child(3):hover,
 #gnav .swatch:nth-child(3):active,
 #gnav .swatch:nth-child(3).chosen {
-  background-color: #ffbf00;
+  background-color: #52F676;
 }
 #gnav .swatch:nth-child(3):active,
 #gnav .swatch:nth-child(3).chosen {
-  -webkit-box-shadow: 0 0 5px #ffbf00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #ffbf00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #ffbf00;
+  -webkit-box-shadow: 0 0 5px #52F676, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #52F676, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #52F676;
 }
+
 #gnav .swatch:nth-child(4),
 #gnav:active .swatch:nth-child(4).chosen {
-  background-color: #93b05f;
+  background-color: #00CAC0;
 }
 #gnav .swatch:nth-child(4):hover,
 #gnav .swatch:nth-child(4):active,
 #gnav .swatch:nth-child(4).chosen {
-  background-color: #40ff00;
+  background-color: #00CAC0;
 }
 #gnav .swatch:nth-child(4):active,
 #gnav .swatch:nth-child(4).chosen {
-  -webkit-box-shadow: 0 0 5px #40ff00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #40ff00, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #40ff00;
+  -webkit-box-shadow: 0 0 5px #00CAC0, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #00CAC0, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #00CAC0;
 }
+
 #gnav .swatch:nth-child(5),
 #gnav:active .swatch:nth-child(5).chosen {
-  background-color: #2eba9c;
+  background-color: #526AD0;
 }
 #gnav .swatch:nth-child(5):hover,
 #gnav .swatch:nth-child(5):active,
 #gnav .swatch:nth-child(5).chosen {
-  background-color: #00ffbf;
+  background-color: #526AD0;
 }
 #gnav .swatch:nth-child(5):active,
 #gnav .swatch:nth-child(5).chosen {
-  -webkit-box-shadow: 0 0 5px #00ffbf, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #00ffbf, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #00ffbf;
+  -webkit-box-shadow: 0 0 5px #526AD0, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #526AD0, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #526AD0;
 }
+
 #gnav .swatch:nth-child(6),
 #gnav:active .swatch:nth-child(6).chosen {
-  background-color: #54b1d3;
+  background-color: #AD3FAC;
 }
 #gnav .swatch:nth-child(6):hover,
 #gnav .swatch:nth-child(6):active,
 #gnav .swatch:nth-child(6).chosen {
-  background-color: #0040ff;
+  background-color: #AD3FAC;
 }
 #gnav .swatch:nth-child(6):active,
 #gnav .swatch:nth-child(6).chosen {
-  -webkit-box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #0040ff;
+  -webkit-box-shadow: 0 0 5px #AD3FAC, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #AD3FAC, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #AD3FAC;
 }
+
 #gnav #st-search-input {
-  background-color: #54b1d3;
+  background-color: #526AD0;
 }
 #gnav #st-search-input:hover,
 #gnav #st-search-input:focus {
-  background-color: #0040ff;
+  background-color: #526AD0;
 }
 #gnav #st-search-input:focus {
-  -webkit-box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  box-shadow: 0 0 5px #0040ff, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
-  border-color: #0040ff;
+  -webkit-box-shadow: 0 0 5px #526AD0, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  box-shadow: 0 0 5px #526AD0, 0 5px 10px rgba(0,0,0,0.5), -2px 0 0 #333, 2px 0 0 #333;
+  border-color: #526AD0;
 }
+
 #gnav .swatch,
 #gnav:active .swatch.chosen,
 #st-search-input {
