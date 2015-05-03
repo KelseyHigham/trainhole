@@ -112,6 +112,7 @@
 </div>
 <div class="grid-6">
    <h2 class="calm">Upcoming Events</h2>
+   <iframe src="https://www.google.com/calendar/embed?src=vcutfn89rns5sb5b3tef98dodc%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="460" height="345" frameborder="0" scrolling="no"></iframe>
    <?php global $user; 
    if (array_key_exists('3', $user->roles) || array_key_exists('4', $user->roles)): ?>
        <a href="<?php print url(); ?>node/add/event" class="event large" style="border-style: dotted;">
