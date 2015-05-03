@@ -97,7 +97,7 @@
 				Add a Game Folder
 			</a>
 		<?php endif; ?>
-		<?php print views_embed_view('list_of_game_folders', 'default'); ?>
+		<?php print views_embed_view('list_of_game_folders2', 'default'); ?>
 		<div  style="border: 10px solid #333; margin-bottom: 20px; display: block; line-height: 1em; font-size: 32px; background-color: #333;">
 			<a style="padding: 14px; display: block; font-weight: normal; text-decoration: none;" href="/archive/games" class="darkLink">Even More Miscellaneous</a>
 			<a href="http://www.glorioustrainwrecks.com/taxonomy/term/514" class="lightLink" style="display: block; padding: 10px; display: block; text-decoration: none; margin: 10px 65px 65px; float: left;">
