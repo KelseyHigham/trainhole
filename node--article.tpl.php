@@ -100,7 +100,7 @@ iframe[src^="https://player.vimeo.com"] {
 <div class='<?php if($page) {print("antiwrapper");} else {print("post grid-9 alpha omega");} ?>' >
 
 
-    <div class="grid-<?= ($page ? "3" : "2 alpha" ) ?>" style="<?= ($page ? "font-size: 32px; margin-top: -17px;" : "font-size: 20px; line-height: 32px; margin-top: 5px;" ) ?>">
+    <div class="grid-<?= ($page ? "3" : "2 alpha" ) ?>" style="<?= ($page ? "font-size: 23px; margin-top: -8px; line-height: 36px;" : "font-size: 16px; line-height: 1.5; margin-top: 10px;" ) ?>">
             <?php print $name; ?><br>
             <?php print format_date($node->created, 'custom', 'M j, Y'); ?><br>
             <?php print format_date($node->created, 'custom', 'g:ia'); ?>
