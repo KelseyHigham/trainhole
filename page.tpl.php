@@ -83,7 +83,7 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
         <div style="text-align: right" class="grid-9">
             
             <nav id="gnav">        
-                <a href="<?php print $base_path; ?>about" class="swatch leftmost dark<?php
+                <a href="<?php print $base_path; ?>about" class="swatch leftmost<?php
             
                     $path = trim($_GET['q'], '/');         // get the current normal drupal path 
                     $path = drupal_get_path_alias($path);  // get its alias
@@ -93,7 +93,7 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
                         print(" chosen");
                     }
             
-                    ?>" style="width: 70px;">
+                    ?>" style="max-width: 72px;">
                     <div class="about-icon gnav-icon"></div><span> about</span></a><!--<a href="<?php print $base_path; ?>forum" class="swatch dark<?php
             
                         $path = trim($_GET['q'], '/');         // get the current normal drupal path
@@ -111,14 +111,14 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
                                     print(" chosen");
                                 }
                             }
-                            ?>" style="width: 70px;">
+                            ?>" style="max-width: 72px;">
                             <div class="games-icon gnav-icon"></div><span> games</span></a><a href="<?php print $base_path; ?>events" class="swatch<?php
                                 if (isset($node)) {
                                     if ($node->type == 'event' || $node->type == 'featured_events')  {
                                         print(" chosen");
                                     }
                                 }
-                                ?>" style="max-width: 76px;">
+                                ?>" style="max-width: 78px;"> 
                                 <div class="events-icon gnav-icon"></div><span> events</span></a><a 
                             
                                 <?php if ($user->uid): ?>
@@ -126,7 +126,7 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
                                     if (arg(0) == 'user') {
                                         print(" chosen");
                                     }
-                                    ?>" style="max-width: 224px;">
+                                    ?>" style="">
                                     <div class="profile-icon gnav-icon"></div><span> <?php print $user->name; ?></span>
                                     
                                 <?php else: ?>
@@ -134,12 +134,12 @@ body{min-width:960px}.container-12{margin-left:auto;margin-right:auto;width:960p
                                     if (arg(0) == 'user') {
                                         print(" chosen");
                                     }
-                                    ?>" style="width: 124px;">
-                                    <div class="login-icon gnav-icon"></div><span> login/signup</span>
+                                    ?>" style="">
+                                    <div class="login-icon gnav-icon"></div><span> login</span>
                                     
                                 <?php endif; ?>
                         
-                            </a><form style="display: inline;" method="GET" action="http://www.google.com/search"><input type="hidden" name="as_sitesearch" value="sjsugamedev.com"><input class="swatch dark" id="st-search-input" placeholder="search" name="as_q"></form>
+                            </a><form style="display: inline;" method="GET" action="http://www.google.com/search"><input type="hidden" name="as_sitesearch" value="sjsugamedev.com"><input class="swatch " id="st-search-input" placeholder="search" name="as_q"></form>
                             
                         
                         </nav>
